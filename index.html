@@ -24,17 +24,17 @@
 <body>
     <header>
         <nav class="navbar">
-          <div class="logo">Andrew Joe</div>
+          <div class="logo"><a href="index.html" style="text-decoration: none; color: #333;">Andrew Joe</a></div>
           <div class="hamburger-menu" id="hamburger-menu">
             <span></span>
             <span></span>
             <span></span>
           </div>
           <ul class="nav-links" id="nav-links">
-            <li><a href="#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="Contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -81,7 +81,8 @@
       </div>
     </div>
     </section>
-    <section id="about-me">
+   <!-- 
+     <section id="about-me">
       <div class="about-container">
         <div class="about-image">
           <img src="images/profile-photo.jpg" alt="Your Name">
@@ -101,6 +102,7 @@
         </div>
       </div>
     </section>
+    -->
     <section class="services">
         <div class="services-intro">
           <h2>My Services</h2>
@@ -152,11 +154,10 @@
     </div>-->
     
     <section id="featured-projects">
-      <h2 class="main-heading">Featured Projects: Content Strategy in Action</h2>
-      <div id="aviation-section">
+      <h2 class="main-heading">Featured Projects(I)</h2>
+      <p class="sec-des">Explore how strategic content drives impact in sustainability</p>
       <div id="content-map">
-        <p class="Featured-p">Explore how strategic content drives impact in aviation.
-          <br><span class="instruction">(Click on the project images to view more details.)</span></p>
+      <p class="instruction">(Click on each project image to view more details.)</p>
         <!-- SVG will be inserted here via JavaScript -->
       </div>
       <div id="project-details" class="hidden">
@@ -169,10 +170,10 @@
         <img id="project-image" src="" alt="Project Image">
         <button id="close-details">&times;</button>
       </div>
-    </div>
     </section>
     <section id="featured-projects">
-      <p class="sec-des">Explore how strategic content drives impact in sustainability</p>
+      <h2 class="main-heading">Featured Projects(II)</h2>
+      <p class="sec-des">Explore how strategic content drives impact in aviation</p>
       <div class="infographic-showcase">
           <!-- Content will be dynamically inserted here -->
       </div>
@@ -185,6 +186,14 @@
     </div>
     <a href="blog.html" class="view-all-btn">View All Posts</a>
   </section>
+  <section id="trusted-by">
+    <h2>Trusted By Industry Leaders</h2>
+    <div class="trust-container">
+        <div class="trust-slider">
+            <!-- Logos will be dynamically inserted here -->
+        </div>
+    </div>
+</section>
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-section about">
@@ -226,13 +235,12 @@
     </div>
   </footer>
   </main>
+  <script src="Scripts/Hamburger.js"></script>
   <script src="Scripts/hero-visuals.js"></script>
   <script src="Scripts/Carousel.js"></script>
   <script src="Scripts/Filter.js"></script>
-  <script src="Scripts/Hamburger.js"></script>
   <script src="Scripts/Portfolio.js"></script>
   <script src="Scripts/projects.js"></script>
   <script src="Scripts/blogsec.js"></script>
-  <script src="Scripts/about.js"></script>
 </body>
 </html>

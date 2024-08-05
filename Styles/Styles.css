@@ -20,6 +20,10 @@
     font-family: Poppins-semibold; 
     src: url('Poppins-SemiBold.ttf');
   }
+  @font-face {
+    font-family: Atlas-Grotesk-Bold-1; 
+    src: url('Atlas-Grotesk-Bold-1.ttf');
+  }
   
   /* General Styles */
   * {
@@ -113,20 +117,36 @@
   }
   
   .cta-button {
+    position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #e74c3c;
     color: #fff;
+    background-color: #ff6347;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2em;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
   }
   
   .cta-button:hover {
-    background-color: #c0392b;
+    background-color: #ff4500;
+  }
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 0.5s ease-in-out;
   }
   
+  .cta-button:hover::before {
+    transform: translateX(100%) rotate(45deg);
+  }
   .hero-visuals {
     position: relative;
     max-width: 600px;
@@ -330,6 +350,10 @@
       padding: 100px 20px 20px;  /* Adjust padding for better spacing */
       min-height: auto;
     }
+
+    #contact-section {
+      padding: 50px 0px 20px !important;
+    }
   
     .branding {
       flex-direction: column;
@@ -393,7 +417,7 @@
   }
   }
 
-  #about-me { 
+ /* #about-me { 
     padding: 80px 20px;
     background: white;
     display: none;
@@ -427,20 +451,10 @@
   .about-content {
     flex: 2;
   }
+  */
   
-  .about-content h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
-    font-family: Poppins-SemiBold;
-  }
+
   
-  .about-content h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 20px;
-    font-family: Poppins-SemiBold;
-  }
   
   .intro {
     font-size: 1.2em;
@@ -483,8 +497,9 @@
   .learn-more-btn:hover {
     background-color: #34495e;
   }
+
   
-  @media (max-width: 768px) {
+ /* @media (max-width: 768px) {
     .about-container {
       flex-direction: column;
     }
@@ -493,6 +508,9 @@
       margin-bottom: 30px;
     }
   }
+  */
+
+
   /* General Styles */
 .services {
     background-color: #f0f8ff;
@@ -514,8 +532,8 @@
     margin-left: auto;
     margin-right: auto;
     line-height: normal;
-    font-family: 'Poppins-semibold';
   }
+
   .services-intro p {
     font-family: Arial, Helvetica, sans-serif !important;
   }
@@ -560,20 +578,7 @@
   .services-cta {
     margin-top: 40px;
   }
-  
-  .cta-button {
-    background-color: #ff6347;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-  }
-  
-  .cta-button:hover {
-    background-color: #ff4500;
-  }
+
   /* Portfolio Section Styling */
 .portfolio-section {
   padding: 60px 20px;
@@ -705,7 +710,7 @@
   font-style: italic;
   margin-bottom: 20px;
   color: #555;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 #featured-projects {
@@ -1095,5 +1100,205 @@ text{
   }
   #blog-section > p{
     font-size: 1em;
+  }
+}
+@media (max-width: 768px) {
+  #content-map svg {
+    display: none; /* Hide the SVG map on mobile */
+  }
+
+  #content-map {
+    height: auto;
+  }
+
+  .mobile-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .mobile-project-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .mobile-project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .mobile-project-info {
+    padding: 15px;
+  }
+
+  .mobile-project-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-project-description {
+    font-size: 14px;
+  }
+
+  #project-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    overflow-y: auto;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+  }
+
+  #project-image {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  #project-info {
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
+  #close-details {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+
+#trusted-by {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+#trusted-by h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.trust-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.trust-slider {
+  display: flex;
+  animation: slide 30s linear infinite;
+}
+
+.trust-logo {
+  flex: 0 0 200px;
+  height: 100px;
+  margin: 0 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-logo:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.trust-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.trust-logo:hover img {
+  filter: none;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+/* Add a gradient overlay to create a fading effect on the sides */
+.trust-container::before,
+.trust-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+}
+
+.trust-container::before {
+  left: 0;
+  background: linear-gradient(to right, #1a2a6c, transparent);
+}
+
+.trust-container::after {
+  right: 0;
+  background: linear-gradient(to left, #fdbb2d, transparent);
+}
+
+@media (max-width: 768px) {
+  #trusted-by {
+      padding: 60px 0;
+  }
+
+  #trusted-by h2 {
+      font-size: 2rem;
+  }
+
+  .trust-logo {
+      flex: 0 0 150px;
+      height: 75px;
+      margin: 0 20px;
+  }
+}
+/* Blinking animation for delayed status */
+p.instruction {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
   }
 }

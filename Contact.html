@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Andrew Joe | Aviation & Sustainability Content Strategist</title>
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="icon" href="favicon.icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></script>
+    <style>
+
+#contact-section{
+    padding: 100px 50px;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 50px;
+}
+
+.contact-info {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    color: white;
+}
+
+.contact-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1a2a6c;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.social-links-contact {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon-contact {
+    color: white;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.social-icon-contact:hover {
+    transform: translateY(-5px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1a2a6c;
+}
+
+.form-group input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b21f1f;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: 0;
+    opacity: 0.1;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .contact-info, .contact-form {
+        padding: 30px;
+    }
+}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would typically send the form data to your server
+        // For this example, we'll just log it to the console
+        console.log('Form submitted!');
+        console.log('Name:', form.name.value);
+        console.log('Email:', form.email.value);
+        console.log('Subject:', form.subject.value);
+        console.log('Message:', form.message.value);
+        
+        // Clear the form
+        form.reset();
+        
+        // Show a success message (you can replace this with a more sophisticated notification)
+        alert('Thank you for your message! I\'ll get back to you soon.');
+    });
+});
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: #333;">Andrew Joe</a></div>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+          <section id="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h1>Let's Elevate Your Content Strategy</h1>
+            <p>Ready to soar above the competition with compelling aviation and sustainability content? Let's connect and chart a course for your success.</p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>youremail@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (123) 456-7890</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Your City, Country</span>
+                </div>
+            </div>
+            <div class="social-links-contact">
+                <a href="#" class="social-icon-contact"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon-contact"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon-contact"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Send Me a Message</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!--<div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>-->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="background-animation"></div>
+</section>
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>About Me</h3>
+            <p>Specialized in crafting compelling narratives at the intersection of aviation and sustainability. Bringing complex ideas to life through strategic content.</p>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Me</h3>
+            <p><i class="fas fa-envelope"></i> anditechnovire@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+          </div>
+          <div class="footer-section newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to my newsletter for the latest insights in aviation and sustainability.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Andrew Joe. All rights reserved.</p>
+          <p>Designed with <i class="fas fa-heart"></i> for aviation and sustainability</p>
+        </div>
+      </footer>
+    </main>
+  <script src="Scripts/Hamburger.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
