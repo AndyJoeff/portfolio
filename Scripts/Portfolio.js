@@ -109,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Trusted By Script Starts Here
+
 document.addEventListener('DOMContentLoaded', function() {
   const trustSlider = document.querySelector('.trust-slider');
   const logos = [
@@ -132,24 +134,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Populate the slider
   logos.forEach(logo => {
-      trustSlider.appendChild(createLogoElement(logo));
-  });
-
-  // Clone the logos to create a seamless loop
-  logos.forEach(logo => {
-      trustSlider.appendChild(createLogoElement(logo));
-  });
-
-  // Pause animation on hover
-  trustSlider.addEventListener('mouseenter', () => {
-      trustSlider.style.animationPlayState = 'paused';
-  });
-
-  trustSlider.addEventListener('mouseleave', () => {
-      trustSlider.style.animationPlayState = 'running';
-  });
+    trustSlider.appendChild(createLogoElement(logo));
 });
 
+// Clone the logos to create a seamless loop
+logos.forEach(logo => {
+    trustSlider.appendChild(createLogoElement(logo));
+});
+
+// Adjust slider width for seamless loop
+trustSlider.style.width = `${(logos.length * 2) * 230}px`; // 230px is logo width + margin
+
+// Pause animation on hover
+trustSlider.addEventListener('mouseenter', () => {
+    trustSlider.style.animationPlayState = 'paused';
+});
+
+trustSlider.addEventListener('mouseleave', () => {
+    trustSlider.style.animationPlayState = 'running';
+});
+});
+// Trusted By Script Ends Here
+
+// Testimonial Script Starts Here
 document.addEventListener('DOMContentLoaded', function() {
   const track = document.querySelector('.testimonial-track');
   const prevBtn = document.querySelector('.prev-btn');

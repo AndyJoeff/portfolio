@@ -13,11 +13,11 @@
     src: url('helvetica.woff2');
   }
   @font-face {
-    font-family: OpenSauceOne-Bold; 
+    font-family: 'OpenSauceOne-Bold'; 
     src: url('OpenSauceOne-Bold.woff');
   }
   @font-face {
-    font-family: Poppins-semibold; 
+    font-family: 'Poppins-semibold'; 
     src: url('Poppins-SemiBold.ttf');
   }
   @font-face {
@@ -296,7 +296,6 @@
     .hamburger-menu {
       display: flex;
     }
-  
   
     .nav-links {
       display: none;
@@ -894,6 +893,7 @@
 
 .blog-content {
   padding: 20px;
+  text-align: left;
 }
 
 .blog-meta {
@@ -1114,6 +1114,10 @@ text{
     height: 300px;
     
   }
+
+  .branding-text h1 {
+    font-size: 1.3rem;
+}
   .sec-des {
     font-size: 1em;
   }
@@ -1232,6 +1236,7 @@ text{
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .trust-slider {
@@ -1272,11 +1277,11 @@ text{
       transform: translateX(0);
   }
   100% {
-      transform: translateX(-50%);
+      transform: translateX(calc(-230px * 5)); /* Adjust based on logo width + margin */
   }
 }
 
-/* Add a gradient overlay to create a fading effect on the sides */
+/* Gradient overlay for fading effect */
 .trust-container::before,
 .trust-container::after {
   content: "";
@@ -1310,6 +1315,15 @@ text{
       flex: 0 0 150px;
       height: 75px;
       margin: 0 20px;
+  }
+
+  @keyframes slide {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(calc(-170px * 5)); /* Adjust based on mobile logo width + margin */
+      }
   }
 }
 /* Blinking animation for delayed status */
@@ -1370,6 +1384,7 @@ p.instruction {
   margin-bottom: 20px;
   position: relative;
   padding: 10px 40px;
+  text-align: center;
 }
 
 .testimonial-text::before,
@@ -1478,12 +1493,15 @@ p.instruction {
 }
 
 @media (max-width: 480px) {
+
+
   .testimonial-content {
       padding: 15px;
   }
 
   .testimonial-text {
       padding: 5px 25px;
+      padding: 5px 10px;
   }
 
   .testimonial-text::before,
