@@ -150,3 +150,91 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const track = document.querySelector('.testimonial-track');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  let currentIndex = 0;
+  const testimonials = [
+      {
+          text: "Sarah's content strategy transformed our approach to communicating about sustainable aviation. Her ability to distill complex topics into engaging narratives significantly boosted our outreach effectiveness.",
+          name: "John Doe",
+          position: "Head of Sustainability, AeroGreen Airlines",
+          image: "Images/profile-photo.jpg"
+      },
+      {
+          text: "The data visualization campaign Sarah created for our airport efficiency study was nothing short of revolutionary. It made our findings accessible and compelling to stakeholders at all levels.",
+          name: "Emma Wilson",
+          position: "Operations Director, Global Airports Association",
+          image: "Images/profile-photo.jpg"
+      },
+      {
+          text: "Sarah's multimedia content package on the future of air travel not only went viral within the industry but also sparked meaningful discussions on sustainability. Her work is both visionary and pragmatic.",
+          name: "Dr. Michael Chen",
+          position: "Chief Innovation Officer, FutureFlight Technologies",
+          image: "Images/profile-photo.jpg"
+      }
+  ];
+
+  function createTestimonialElement(testimonial) {
+      return `
+          <div class="testimonial-item">
+              <div class="testimonial-content">
+                  <p class="testimonial-text">${testimonial.text}</p>
+                  <div class="client-info">
+                      <img src="${testimonial.image}" alt="${testimonial.name}" class="client-image">
+                      <div class="client-details">
+                          <h4>${testimonial.name}</h4>
+                          <p>${testimonial.position}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      `;
+  }
+
+  testimonials.forEach(testimonial => {
+      track.innerHTML += createTestimonialElement(testimonial);
+  });
+
+  function updateCarousel() {
+      track.style.transition = 'transform 0.5s ease';
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function resetTransition() {
+      track.style.transition = 'none';
+  }
+
+  nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      updateCarousel();
+  });
+
+  track.addEventListener('transitionend', resetTransition);
+
+  // Optional: Auto-play functionality
+  function autoPlay() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      updateCarousel();
+  }
+
+  // Uncomment the next line if you want auto-play
+  let autoPlayInterval = setInterval(autoPlay, 5000); // Change slide every 5 seconds
+
+  // Optional: Pause auto-play on hover
+  track.addEventListener('mouseenter', () => {
+      if (autoPlayInterval) clearInterval(autoPlayInterval);
+  });
+
+  track.addEventListener('mouseleave', () => {
+      if (autoPlayInterval) clearInterval(autoPlayInterval);
+      // Uncomment the next line if you want auto-play to resume after hover
+      autoPlayInterval = setInterval(autoPlay, 5000);
+  });
+});

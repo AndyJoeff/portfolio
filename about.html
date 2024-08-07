@@ -11,6 +11,292 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"></script>
   <style>
 
+:root {
+  --color--paragraph-color: #585858;
+  --color--secondary-color: #050b1b;
+  --color--primary-color: #fc5b15;
+  --white: white;
+  --color--secondary-bg: #e2e4eb;
+  --section-gap--normal: 100px;
+  --section-gap--extra-large: 150px;
+  --section-gap--large: 120px;
+  --section-gap--medium: 80px;
+  --section-gap--small: 60px;
+  --black: black;
+  --rem: 16;
+}
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('Styles/65ffa7f24e83ddea53c49ece_Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins Semi Bold';
+  src: url('Styles/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('Styles/65ffa83d68384b0aae865644_Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: #333;
+  background-color: #fff;
+  min-height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body {
+  color: var(--color--paragraph-color);
+  font-family: Poppins Regular, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+.about-hero-section {
+    background-image: url(https://assets-global.website-files.com/65ff9e0…/660108d…_home-hero-left-shape.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background: #8bc6ed75;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h2 {
+    color: var(--color--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Poppins Semi Bold, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.24;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+.w-container {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-layout-blockcontainer {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.container-default {
+    max-width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.w-container:before, .w-container:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+.about-hero-wrapper {
+    position: relative;
+}
+
+.about-hero-grid {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 1.2fr 1fr;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: start;
+  display: grid;
+}
+
+.section-heading-wrapper {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.subtitle-wrapper {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+.subtitle-text {
+    color: var(--color--primary-color);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.subtitle-line {
+    background-color: var(--color--primary-color);
+    border-radius: 30px;
+    width: 30px;
+    height: 1.5px;
+}
+
+.section-heading-block.max-width-570px {
+    max-width: 570px;
+}
+
+.section-parapraph-block {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.introduction-fun-fact-wrapper {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    display: flex;
+}
+
+.fun-fact-number-wrapper {
+    height: 48px;
+    display: flex;
+    overflow: hidden;
+}
+
+.fun-fact-number {
+    color: var(--black);
+    text-align: left;
+    font-family: Poppins Semi Bold, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.fun-fact-number-block {
+    flex-direction: column;
+    display: flex;
+}
+
+.fun-fact-number-block.upper-movement {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fun-fact-number.intro-fun-fact {
+    font-family: Poppins Medium, sans-serif;
+    font-weight: 500;
+}
+
+.fun-fact-heading-text {
+    color: var(--color--secondary-color);
+    font-family: Poppins Semi Bold, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.fun-fact-heading-text.introduction-fun-fact-text {
+    color: var(--color--primary-color);
+    font-family: Poppins Medium, sans-serif;
+    font-weight: 500;
+}
+.counter-text {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.about-me-framed-image-block {
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+.about-hero-framed-image {
+    border-radius: 200px;
+    width: 91%;
+    position: absolute;
+    top: 4%;
+}
+.about-hero-shape-one {
+  position: absolute;
+  top: -20px;
+  left: -46px;
+}
+
+.about-hero-shape-two {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+.w-container:after {
+    clear: both;
+}
+.w-container:before, .w-container:after {
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+}
+.fun-fact-number-wrapper {
+    overflow: hidden;
+}
+
+.fun-fact-number-block {
+    transition: transform 0.05s ease;
+}
+
+
+
 #about-me {
   background-color: #f8f9fa;
   padding: 100px 0;
@@ -231,6 +517,121 @@
     font-size: 1em;
     color: #333;
 }
+.digit-container {
+            display: flex;
+            font-size: 44px;
+            font-family: 'Poppins medium';
+            overflow: hidden;
+        }
+        .digit {
+            width: 28px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            position: relative;
+            color: black;
+        }
+        .digit-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        #digit1 .digit-content {
+            animation-name: scrollUp;
+        }
+        #digit2 .digit-content {
+            animation-name: scrollDown;
+        }
+        #digit3 .digit-content {
+            animation-name: scrollUp;
+        }
+        @keyframes scrollUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-540px); }
+        }
+        @keyframes scrollDown {
+            0% { transform: translateY(-540px); }
+            100% { transform: translateY(0); }
+        }
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+ 
+@media screen and (min-width: 1280px) {
+    .about-hero-grid {
+        grid-column-gap: 80px;
+        grid-row-gap: 80px;
+        grid-template-columns: 1.35fr 1fr;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    .introduction-fun-fact-wrapper {
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .fun-fact-number-wrapper {
+        height: 53px;
+    }
+
+
+    .about-hero-framed-image {
+        width: auto;
+    }
+
+    .about-hero-shape-two {
+    top: 80px;
+    right: -55px;
+  }
+  .container-default {
+    max-width: 1170px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+    .about-hero-section {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .container-default {
+        max-width: 740px;
+    }
+
+    .about-hero-grid {
+        grid-column-gap: 60px;
+        grid-row-gap: 60px;
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width: 768px) {
     .approach-pillar, .approach-pillar:nth-child(even) {
@@ -240,13 +641,68 @@
     .pillar-image {
         height: 300px;
     }
-}
-@media (max-width: 768px) {
+
+    .about-hero-shape-one {
+    left: 0;
+  }
+
+    .container-default {
+        max-width: 630px;
+    }
+
   .about-content {
       grid-template-columns: 1fr;
   }
   .about-header h1{
       font-size: 2rem;
+  }
+  .about-hero-section {
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .about-hero-content-wrapper {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .section-heading-wrapper {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    .introduction-fun-fact-wrapper {
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        flex-flow: wrap;
+        margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .container-default {
+        max-width: 740px;
+    }
+
+    #w-node-fb655073-fbd2-e0b9-5dc9-35ce825214e8-b6965bb7, #w-node-_96015eaa-dc88-bb9a-c15d-61036752119c-f6b03cad {
+        justify-self: center;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .introduction-fun-fact-wrapper {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .digit-container{
+      font-size: 30px;
+    }
+    .digit{
+      width: 19px;
+    }
+
+    .about-hero-shape-one {
+    width: 70px;
   }
 }
   </style>
@@ -272,7 +728,24 @@
   });
 });
   </script>
+ <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+ if (entry.isIntersecting) {
+   entry.target.classList.add('is-visible');
+ }
+});
+}, {
+threshold: 0.1
+});
 
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+observer.observe(el);
+});
+});
+
+</script>
 </head>
 <body>
     <header>
@@ -292,9 +765,79 @@
         </nav>
       </header>
       <main>
-
-      
-        <section id="about-me">
+          <section data-w-id="e0e1bcb2-7000-9528-f9c7-23b59b175309" class="about-hero-section">
+            <div class="w-layout-blockcontainer container-default w-container">
+                <div class="about-hero-wrapper">
+                    <div class="about-hero-grid">
+                        <div class="introduction-content-wrapper">
+                            <div class="section-heading-wrapper">
+                                <div class="subtitle-wrapper">
+                                    <div class="subtitle-line"></div>
+                                    <div class="subtitle-text">Andrew Joe</div>
+                                </div>
+                                <div class="section-heading-block max-width-570px">
+                                    <h2 class="section-heading">Unveiling the creative force within</h2>
+                                </div>
+                                <div data-w-id="8e6b414c-508b-d9e2-9a94-46f7537df7fc" class="section-parapraph-block">
+                                    <p class="section-paragraph">My work transforms complex aviation concepts into compelling stories that inspire change. This isn't just my portfolio—it's a launchpad for ideas that make the aerospace industry greener and more innovative.
+        
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="introduction-fun-fact-wrapper">
+                              <div class="counter-block">
+                                  <div class="digit-container">
+                  <div id="digit3" class="digit">
+                  <div class="digit-content" style="transform: translateY(-240px);">6<br>7<br>8<br>9<br>0<br>1<br>2<br>3<br>4<br>5</div>
+                  </div>
+                  
+                  
+                  
+                  <div class="fun-fact-heading-text introduction-fun-fact-text digit">+</div>
+                  </div><p class="counter-text">Years of experience</p></div>
+                                  <div class="counter-block">
+                                      <div class="digit-container">
+                  <div id="digit3" class="digit">
+                  <div class="digit-content" style="transform: translateY(-240px);">6<br>7<br>8<br>9<br>0<br>1<br>2<br>3<br>4<br>5</div>
+                  </div>
+                  
+                  <div id="digit2" class="digit">
+                  <div class="digit-content" style="transform: translateY(-360px);">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</div>
+                  </div>
+                  <div id="digit1" class="digit">
+                  <div class="digit-content" style="transform: translateY(-240px);">9<br>8<br>7<br>6<br>5<br>4<br>3<br>2<br>1<br>0</div>
+                  </div>
+                  <div class="fun-fact-heading-text introduction-fun-fact-text digit">+</div>
+                  </div><p class="counter-text">Satisfied clients</p></div>
+                                      <div class="counter-block"><div class="digit-container">
+                  <div id="digit3" class="digit">
+                  <div class="digit-content" style="transform: translateY(-240px);">6<br>7<br>8<br>9<br>0<br>1<br>2<br>3<br>4<br>9</div>
+                  </div>
+                  
+                  
+                  <div id="digit2" class="digit">
+                      <div class="digit-content" style="transform: translateY(-360px);">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</div>
+                      </div>
+                  <div class="fun-fact-heading-text introduction-fun-fact-text digit">%</div>
+                  </div><p class="counter-text">Positive review</p>
+                                  </div>
+                              </div>
+                            </div>
+                            <div id="w-node-_96015eaa-dc88-bb9a-c15d-61036752119c-f6b03cad" class="about-hero-image-wrapper">
+                                <div class="about-me-framed-image-block">
+                                    <img src="https://assets-global.website-files.com/65ff9e0c590d4325677554a7/660b96a24557a808e9020095_about-hero-framed-shape.svg" loading="lazy"  alt="About Hero Framed Shape" class="about-hero-framed-shape animate-on-scroll">
+                                    <img src="https://assets-global.website-files.com/65ff9e0c590d4325677554a7/660b984b139f799a9b0d675e_about-hero-image.jpg" loading="lazy"  alt="About Hero Framed Image" class="about-hero-framed-image animate-on-scroll">
+                                    <div class="about-me-image-shape-wrapper">
+                                        <img src="https://assets-global.website-files.com/65ff9e0c590d4325677554a7/660b9d44912d80a57ed9ef95_about-hero-image-shape-two.svg" loading="lazy" data-w-id="96015eaa-dc88-bb9a-c15d-6103675211a1" alt="About Hero Image Shape Two" class="about-hero-shape-two" style="transform: translate3d(0px, -5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
+                                        <img src="https://assets-global.website-files.com/65ff9e0c590d4325677554a7/660b9d44d445f22b835c113c_about-hero-image-shape-one.svg" loading="lazy" data-w-id="96015eaa-dc88-bb9a-c15d-6103675211a2" alt="About Hero Image Shape One" class="about-hero-shape-one" style="transform: translate3d(0px, 5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="about-me"></section>
             <div class="container">
                 <header class="about-header">
                     <h1>About Andrew Joe</h1>
