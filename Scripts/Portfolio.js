@@ -160,19 +160,19 @@ document.addEventListener('DOMContentLoaded', function() {
           text: "Sarah's content strategy transformed our approach to communicating about sustainable aviation. Her ability to distill complex topics into engaging narratives significantly boosted our outreach effectiveness.",
           name: "John Doe",
           position: "Head of Sustainability, AeroGreen Airlines",
-          image: "Images/profile-photo.jpg"
+          image: "images/profile-photo.jpg"
       },
       {
           text: "The data visualization campaign Sarah created for our airport efficiency study was nothing short of revolutionary. It made our findings accessible and compelling to stakeholders at all levels.",
           name: "Emma Wilson",
           position: "Operations Director, Global Airports Association",
-          image: "Images/profile-photo.jpg"
+          image: "images/profile-photo.jpg"
       },
       {
           text: "Sarah's multimedia content package on the future of air travel not only went viral within the industry but also sparked meaningful discussions on sustainability. Her work is both visionary and pragmatic.",
           name: "Dr. Michael Chen",
           position: "Chief Innovation Officer, FutureFlight Technologies",
-          image: "Images/profile-photo.jpg"
+          image: "images/profile-photo.jpg"
       }
   ];
 
