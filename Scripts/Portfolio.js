@@ -1,9 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
   const projects = [
-    { id: 'project1', title: 'Sustainable Aviation Fuels', image: 'images/Eco-Friendly-Lifestyle-Practices.png', x: 100, y: 100 },
-    { id: 'project2', title: 'Airport Efficiency Study', image: 'images/eco-friendly-living.jpg', x: 300, y: 200 },
-    { id: 'project3', title: 'Carbon Offset Programs', image: 'images/plastic.jpg', x: 500, y: 100 },
-    { id: 'project4', title: 'Future of Air Travel', image: 'images/1b839d_33e82dfe540b4df4a48a3d022ef46b52~mv2.jpg', x: 700, y: 200 },
+    { id: 'project1', title: 'Eco-Friendly Living', image: 'images/Eco-Friendly-Lifestyle-Practices.png', x: 100, y: 100,
+      description: 'Developed a comprehensive content strategy to promote eco-friendly living practices, including blog posts, infographics, and social media campaigns.',
+      stats: 'Engagement: +40%, Reach: 1M+, Conversion: 15% increase in sustainable lifestyle adoptions',
+      excerpt: 'Our eco-friendly living campaign focused on educating the public about simple, effective ways to reduce their environmental impact in daily life...' },
+    { id: 'project2', title: 'Sustainability in Agriculture', image: 'images/sustainabilityin agric.jpg', x: 300, y: 200,
+      description: 'Created an in-depth content series on sustainable agricultural practices, targeting farmers and consumers alike.',
+      stats: 'Organic reach: 500K+, Farmer engagement: +60%, Consumer awareness increase: 35%',
+      excerpt: 'This project aimed to bridge the gap between traditional farming methods and sustainable practices, showcasing the benefits for both producers and consumers...' },
+    { id: 'project3', title: 'Tackling Plastic Pollution', image: 'images/plastic.jpg', x: 500, y: 100,
+      description: 'Launched a multi-platform awareness campaign on plastic pollution, its impact, and solutions.',
+      stats: 'Video views: 2M+, Pledge participants: 100K+, Plastic reduction: estimated 500 tons',
+      excerpt: 'Our plastic pollution campaign utilized powerful visuals and storytelling to drive home the urgency of the plastic crisis and inspire actionable change...' },
+    { id: 'project4', title: 'Clean Energy for Home', image: 'images/reneawable for home.jpg', x: 700, y: 200,
+      description: 'Developed an educational content package on adopting clean energy solutions for residential use.',
+      stats: 'Download rate: 75K+, Implementation rate: 20%, Energy savings: estimated 1.5M kWh',
+      excerpt: 'This project broke down the complexities of home clean energy adoption, providing clear, actionable information for homeowners...' },
   ];
 
   const contentMap = document.getElementById('content-map');
@@ -96,9 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectImage = document.getElementById('project-image');
 
     projectTitle.textContent = project.title;
-    projectDescription.textContent = 'This is a detailed project description showcasing the content strategy and its impact.';
-    projectStats.textContent = 'Engagement: +40%, Reach: 1M+, Conversion: 15% increase in target metric';
-    projectExcerpt.textContent = 'This project involved creating a comprehensive content strategy that included blog posts, infographics, and social media campaigns...';
+    projectDescription.textContent = project.description;
+    projectStats.textContent = project.stats;
+    projectExcerpt.textContent = project.excerpt;
     projectImage.src = project.image;
 
     projectDetails.classList.remove('hidden');
@@ -109,139 +121,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Trusted By Script Starts Here
-
-document.addEventListener('DOMContentLoaded', function() {
-  const trustSlider = document.querySelector('.trust-slider');
-  const logos = [
-      { name: 'Airline 1', image: '	https://eepower.com/images/site/Logo-Large.png' },
-      { name: 'Sustainability Org 1', image: 'https://thepilotnetwork.com/cdn/shop/files/TPN-Logo-Words-Logo-Black-Transparent_360x.png?v=1614316240' },
-      { name: 'Airport 1', image: 'images/centec%20logo.png' },
-      { name: 'Aviation Tech 1', image: 'images/RealGXlogo.png' },
-      { name: 'Green Energy 1', image: 'https://simpleflying.com/public/build/images/sf-logo-full-colored-dark.svg?v=3.0' },
-      { name: 'Green Energy 1', image: 'https://www.avient.com/themes/upward/fluid/images/footer-logo.svg' },
-      { name: 'Green Energy 1', image: 'https://www.dixongolf.com/assets/img/DixonGolf_Logo_HiRes_TransparentBG_RGB.png' },
-      // Add more logos as needed
-  ];
-  
-  // Function to create logo elements
-  function createLogoElement(logo) {
-      const div = document.createElement('div');
-      div.className = 'trust-logo';
-      div.innerHTML = `<img src="${logo.image}" alt="${logo.name} logo">`;
-      return div;
-  }
-
-  // Populate the slider
-  logos.forEach(logo => {
-    trustSlider.appendChild(createLogoElement(logo));
-});
-
-// Clone the logos to create a seamless loop
-logos.forEach(logo => {
-    trustSlider.appendChild(createLogoElement(logo));
-});
-
-// Adjust slider width for seamless loop
-trustSlider.style.width = `${(logos.length * 2) * 230}px`; // 230px is logo width + margin
-
-// Pause animation on hover
-trustSlider.addEventListener('mouseenter', () => {
-    trustSlider.style.animationPlayState = 'paused';
-});
-
-trustSlider.addEventListener('mouseleave', () => {
-    trustSlider.style.animationPlayState = 'running';
-});
-});
-// Trusted By Script Ends Here
-
-// Testimonial Script Starts Here
-document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('.testimonial-track');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  let currentIndex = 0;
-  const testimonials = [
-      {
-          text: "Sarah's content strategy transformed our approach to communicating about sustainable aviation. Her ability to distill complex topics into engaging narratives significantly boosted our outreach effectiveness.",
-          name: "John Doe",
-          position: "Head of Sustainability, AeroGreen Airlines",
-          image: "images/profile-photo.jpg"
-      },
-      {
-          text: "The data visualization campaign Sarah created for our airport efficiency study was nothing short of revolutionary. It made our findings accessible and compelling to stakeholders at all levels.",
-          name: "Emma Wilson",
-          position: "Operations Director, Global Airports Association",
-          image: "images/profile-photo.jpg"
-      },
-      {
-          text: "Sarah's multimedia content package on the future of air travel not only went viral within the industry but also sparked meaningful discussions on sustainability. Her work is both visionary and pragmatic.",
-          name: "Dr. Michael Chen",
-          position: "Chief Innovation Officer, FutureFlight Technologies",
-          image: "images/profile-photo.jpg"
-      }
-  ];
-
-  function createTestimonialElement(testimonial) {
-      return `
-          <div class="testimonial-item">
-              <div class="testimonial-content">
-                  <p class="testimonial-text">${testimonial.text}</p>
-                  <div class="client-info">
-                      <img src="${testimonial.image}" alt="${testimonial.name}" class="client-image">
-                      <div class="client-details">
-                          <h4>${testimonial.name}</h4>
-                          <p>${testimonial.position}</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      `;
-  }
-
-  testimonials.forEach(testimonial => {
-      track.innerHTML += createTestimonialElement(testimonial);
-  });
-
-  function updateCarousel() {
-      track.style.transition = 'transform 0.5s ease';
-      track.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
-
-  function resetTransition() {
-      track.style.transition = 'none';
-  }
-
-  nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      updateCarousel();
-  });
-
-  track.addEventListener('transitionend', resetTransition);
-
-  // Optional: Auto-play functionality
-  function autoPlay() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      updateCarousel();
-  }
-
-  // Uncomment the next line if you want auto-play
-  let autoPlayInterval = setInterval(autoPlay, 5000); // Change slide every 5 seconds
-
-  // Optional: Pause auto-play on hover
-  track.addEventListener('mouseenter', () => {
-      if (autoPlayInterval) clearInterval(autoPlayInterval);
-  });
-
-  track.addEventListener('mouseleave', () => {
-      if (autoPlayInterval) clearInterval(autoPlayInterval);
-      // Uncomment the next line if you want auto-play to resume after hover
-      autoPlayInterval = setInterval(autoPlay, 5000);
-  });
-});

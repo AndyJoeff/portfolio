@@ -61,7 +61,14 @@
     background-color: #f0f8ff;
     font-family: Arial;
   }
-  
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    font-size: 18px;
+  }
   /* Header Styles */
   .navbar {
     display: flex;
@@ -91,7 +98,6 @@
   .nav-links a {
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
     transition: color 0.3s;
   }
   
@@ -125,6 +131,7 @@
   */
   .hero-content {
     max-width: 600px;
+    max-width: 520px;
   }
   
   .hero h2 {
@@ -136,7 +143,7 @@
   
   .hero p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   
   .cta-button {
@@ -242,13 +249,13 @@
     border-radius: 10px;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }*/
+  }
   
   .hero-image:hover {
     transform: scale(1.05);
     opacity: 0.9;
   }
-
+*/
   
   /* Branding Styles */
   .branding {
@@ -392,7 +399,7 @@
     }
   
     .hero-content {
-      max-width: 100%;
+      /*max-width: 100%;*/
       text-align: center;
     }
   
@@ -402,7 +409,7 @@
     }
   
     .hero p {
-      font-size: 1rem;
+      font-size: 18px;
       margin-bottom: 30px;
     }
     .hero-visuals {
@@ -586,14 +593,15 @@
   }
   
   .service-item h3 {
-    font-size: 1.3em;
+    font-size: 22px;
     margin-bottom: 10px;
     font-family: 'Poppins-semibold';
   }
   
   .service-item p {
-    font-size: 1em;
     margin-bottom: 0;
+    font-size: 16px;
+    font-family: helvetica;
   }
   
   /* Call to Action */
@@ -690,6 +698,7 @@
 #project-info {
   flex: 1;
   padding-right: 20px;
+  font-size: 18px
 }
 
 #project-image {
@@ -744,7 +753,7 @@
 }
 
 .infographic-showcase {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -784,7 +793,6 @@
 }
 
 .project-description {
-  font-size: 16px;
   color: #666;
   margin-bottom: 20px;
 }
@@ -806,7 +814,7 @@
 }
 
 .stat-label {
-  font-size: 14px;
+  font-size: 16px;
   color: #888;
 }
 
@@ -892,7 +900,7 @@
 }
 
 .blog-content {
-  padding: 20px;
+  padding: 24px;
   text-align: left;
 }
 
@@ -900,8 +908,9 @@
   display: flex;
   justify-content: space-between;
   color: #888;
-  font-size: 0.9em;
+  font-size: 16px;
   margin-bottom: 10px;
+  font-family: 'Poppins Regular';
 }
 h3#project-title {
   font-family: 'Poppins-semibold';
@@ -927,8 +936,9 @@ text{
 
 .blog-post p {
   color: #666;
-  font-size: 0.9em;
+  font-size: 14px;
   line-height: 1.6;
+  font-family: 'poppins regular';
 }
 
 .view-all-btn {
@@ -1026,6 +1036,10 @@ text{
   transform: translateY(-3px);
 }
 
+.fab, .far {
+    color: cornflowerblue;
+}
+
 .quick-links ul {
   list-style-type: none;
   padding: 0;
@@ -1066,6 +1080,8 @@ text{
   border: none;
   border-radius: 3px 0 0 3px;
   width: 100%;
+  font-size: 16px;
+  font-family: poppins regular;
 }
 
 .newsletter-form button {
@@ -1076,6 +1092,8 @@ text{
   border-radius: 0 3px 3px 0;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Poppins Regular';
+  font-size: 16px;
 }
 
 .newsletter-form button:hover {
@@ -1119,7 +1137,7 @@ text{
     font-size: 1.3rem;
 }
   .sec-des {
-    font-size: 1em;
+    font-size: 18px;
   }
   
   #content-map svg text {
@@ -1500,8 +1518,7 @@ p.instruction {
   }
 
   .testimonial-text {
-      padding: 5px 25px;
-      padding: 5px 10px;
+      padding: 5px 20px;
   }
 
   .testimonial-text::before,
