@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
             cta: "View Case Study"
         },
         {
-            title: "Sustainable Aviation Fuel Campaign",
-            image: "images/images.jpg",
-            description: "Developed a multi-channel content strategy to educate and promote the adoption of Sustainable Aviation Fuels (SAF) among airlines and passengers.",
+            title: "Airport Carbon Accreditation Program",
+            image: "images/images5.png",
+            description: "Developed a comprehensive eBook providing a detailed roadmap for airports to achieve carbon accreditation.",
             stats: {
                 engagement: "+45%",
                 reach: "2M+",

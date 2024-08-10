@@ -2,26 +2,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const blogContainer = document.querySelector('.blog-container');
     const blogPosts = [
       {
+        image: 'images/Eviation_aliceV2.png',
+        date: 'April 10, 2024',
+        category: 'Data Visualization',
+        title: 'The Top 5 Innovations Making Air Travel Safer Than Ever',
+        snippet: 'Aircraft safety has always been a top priority, but as technology advances, so do the methods and...'
+      },
+      {
         image: 'images/Universalhydogen.png',
         date: 'May 15, 2024',
         category: 'Sustainability',
-        title: 'The Future of Sustainable Aviation: Beyond SAF',
-        snippet: 'Exploring emerging technologies and strategies that are shaping the future of sustainable aviation beyond Sustainable Aviation Fuels.'
+        title: 'The Future of Sustainable Aviation: Looking Beyond SAF',
+        snippet: 'Sustainable Aviation Fuel has set the stage for a greener future in air travel, but the industry\'s ambitions...'
       },
       {
-        image: 'images/27_Joby_Aviation_Aircraft.jpg',
+        image: 'https://www.worldfashionexchange.com/blog/wp-content/uploads/2023/10/What-is-sustainable-fashion.webp',
         date: 'April 28, 2024',
         category: 'Content Strategy',
-        title: 'Crafting Compelling Narratives in Aviation',
-        snippet: 'How to develop engaging content strategies that resonate with aviation professionals and enthusiasts alike.'
+        title: 'Sustainable Fashion: How to Build an Eco-Friendly Wardrobe',
+        snippet: 'Sustainable fashion is more than just a trend—it’s a necessary shift toward a more responsible and...'
       },
-      {
-        image: 'images/disposable-paper-coffee-cup.jpg',
-        date: 'April 10, 2024',
-        category: 'Data Visualization',
-        title: 'Visualizing Aviation Data for Impact',
-        snippet: 'Techniques and best practices for turning complex aviation data into clear, actionable insights through effective visualization.'
-      }
     ];
   
     blogPosts.forEach(post => {
