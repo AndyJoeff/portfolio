@@ -1,27 +1,66 @@
 document.addEventListener('DOMContentLoaded', function() {
   const projects = [
-    { id: 'project1', title: 'Eco-Friendly Living', image: 'images/Eco-Friendly-Lifestyle-Practices.png', x: 100, y: 100,
-      description: 'Developed a comprehensive content strategy to promote eco-friendly living practices, including blog posts, infographics, and social media campaigns.',
-      stats: 'Engagement: +40%, Reach: 1M+, Conversion: 15% increase in sustainable lifestyle adoptions',
-      excerpt: 'Our eco-friendly living campaign focused on educating the public about simple, effective ways to reduce their environmental impact in daily life...' },
-    { id: 'project2', title: 'Sustainability in Agriculture', image: 'images/sustainabilityin agric.jpg', x: 300, y: 200,
+    { 
+      id: 'project1', 
+      title: 'Eco-Friendly Living', 
+      image: 'images/Eco-Friendly-Lifestyle-Practices.png', 
+      x: 100, 
+      y: 100,
+      description: 'Developed a content strategy to promote eco-friendly living practices, including blog posts, infographics, and social media campaigns.',
+      stats: [
+        { value: '+25%', label: 'Engagement' },
+        { value: '100K+', label: 'Reach' },
+        { value: '10%', label: 'CTR' }
+      ],
+      excerpt: 'Our eco-friendly living campaign focused on educating the public about simple, effective ways to reduce their environmental impact in daily life...' 
+    },
+    {
+      id: 'project2', 
+      title: 'Sustainability in Agriculture', 
+      image: 'images/sustainabilityin agric.jpg', 
+      x: 300, 
+      y: 200,
       description: 'Created an in-depth content series on sustainable agricultural practices, targeting farmers and consumers alike.',
-      stats: 'Organic reach: 500K+, Farmer engagement: +60%, Consumer awareness increase: 35%',
-      excerpt: 'This project aimed to bridge the gap between traditional farming methods and sustainable practices, showcasing the benefits for both producers and consumers...' },
-    { id: 'project3', title: 'Tackling Plastic Pollution', image: 'images/plastic.jpg', x: 500, y: 100,
+      stats: [
+        { value: '50K+', label: 'Views' },
+        { value: '+30%', label: 'Shares' },
+        { value: '4.7/5', label: 'Rating' }
+      ],
+      excerpt: 'This project aimed to bridge the gap between traditional farming methods and sustainable practices, showcasing the benefits for both producers and consumers...' 
+    },
+    {
+      id: 'project3', 
+      title: 'Tackling Plastic Pollution', 
+      image: 'images/plastic.jpg', 
+      x: 500, 
+      y: 100,
       description: 'Launched a multi-platform awareness campaign on plastic pollution, its impact, and solutions.',
-      stats: 'Video views: 2M+, Pledge participants: 100K+, Plastic reduction: estimated 500 tons',
-      excerpt: 'Our plastic pollution campaign utilized powerful visuals and storytelling to drive home the urgency of the plastic crisis and inspire actionable change...' },
-    { id: 'project4', title: 'Clean Energy for Home', image: 'images/reneawable for home.jpg', x: 700, y: 200,
+      stats: [
+        { value: '200K+', label: 'Views' },
+        { value: '10K+', label: 'Pledges' },
+        { value: '+40%', label: 'Awareness' }
+      ],
+      excerpt: 'Our plastic pollution campaign utilized powerful visuals and storytelling to drive home the urgency of the plastic crisis and inspire actionable change...' 
+    },
+    {
+      id: 'project4', 
+      title: 'Clean Energy for Home', 
+      image: 'images/reneawable for home.jpg', 
+      x: 700, 
+      y: 200,
       description: 'Developed an educational content package on adopting clean energy solutions for residential use.',
-      stats: 'Download rate: 75K+, Implementation rate: 20%, Energy savings: estimated 1.5M kWh',
-      excerpt: 'This project broke down the complexities of home clean energy adoption, providing clear, actionable information for homeowners...' },
+      stats: [
+        { value: '15K+', label: 'Downloads' },
+        { value: '4.8/5', label: 'User rating' },
+        { value: '+20%', label: 'Inquiries' }
+      ],
+      excerpt: 'This project broke down the complexities of home clean energy adoption, providing clear, actionable information for homeowners...' 
+    },
   ];
-
+  
   const contentMap = document.getElementById('content-map');
 
   if (window.innerWidth <= 768) {
-    // Create mobile layout
     const mobileList = document.createElement('div');
     mobileList.className = 'mobile-project-list';
 
@@ -41,11 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     contentMap.appendChild(mobileList);
   } else {
-    // Create SVG map for larger screens
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute('viewBox', '0 0 800 400');
 
-    // Create flight paths
     projects.forEach((project, index) => {
       if (index > 0) {
         const prevProject = projects[index - 1];
@@ -58,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Create project nodes
     projects.forEach((project) => {
       const nodeGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
       nodeGroup.classList.add('map-node');
@@ -104,14 +140,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectTitle = document.getElementById('project-title');
     const projectDescription = document.getElementById('project-description');
     const projectStats = document.getElementById('project-stats');
-    const projectExcerpt = document.getElementById('project-excerpt');
+    // const projectExcerpt = document.getElementById('project-excerpt');
     const projectImage = document.getElementById('project-image');
+    const projectCTA = document.getElementById('project-cta'); // Reference to CTA Button
 
     projectTitle.textContent = project.title;
     projectDescription.textContent = project.description;
-    projectStats.textContent = project.stats;
-    projectExcerpt.textContent = project.excerpt;
+    projectStats.innerHTML = project.stats.map(stat => `
+      <div class="stat-item1">
+        <div class="stat-value">${stat.value}</div>
+        <div class="stat-label1">${stat.label}</div>
+      </div>
+    `).join('');
+    // projectExcerpt.textContent = project.excerpt;
     projectImage.src = project.image;
+    projectCTA.href = `path-to-full-project/${project.id}`; // Link to the full project page or details
+    projectCTA.textContent = 'Read More'; // Set the text for the CTA
+
 
     projectDetails.classList.remove('hidden');
   }
@@ -120,4 +165,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('project-details').classList.add('hidden');
   });
 });
-

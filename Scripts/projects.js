@@ -6,47 +6,44 @@ document.addEventListener('DOMContentLoaded', function() {
             image: "images/Universalhydogen.png",
             description: "A user-friendly web-based tool that enables travelers to research the safety profiles of various aircraft models and airlines.",
             stats: {
-                engagement: "+45%",
-                reach: "2M+",
-                conversion: "20%"
+                users: "10k+",
+                dataPoints: "500+",
+                accuracy: "99%"
             },
-            cta: "View Case Study"
+            cta: "Try the Analyzer"
         },
         {
             title: "Airport Carbon Accreditation Program",
             image: "images/images5.png",
             description: "Developed a comprehensive eBook providing a detailed roadmap for airports to achieve carbon accreditation.",
             stats: {
-                engagement: "+45%",
-                reach: "2M+",
-                conversion: "20%"
+                downloads: "5k+",
+                pages: "100+",
+                rating: "4.8/5"
             },
-            cta: "View Case Study"
+            cta: "Download eBook"
         },
-
-        
-
         {
             title: "Aviation Career Spotlight",
             image: "images/aviation-career.jpg",
-            description: "A series of podcast episodes featuring interviews with professionals from various aviation careers, including pilots, aerospace engineers, and airline executives",
+            description: "A series of podcast episodes featuring interviews with aviation professionals including pilots, aerospace engineers, and airline executives.",
             stats: {
-                participation: "+30%",
-                carbonReduction: "500k tons",
-                awarenessIncrease: "65%"
+                episodes: "25+",
+                listeners: "50k+",
+                reviews: "4.7/5"
             },
-            cta: "Explore the Impact"
+            cta: "Listen Now"
         },
         {
             title: "Innovations in Urban Air Mobility",
             image: "https://www.airmedandrescue.com/sites/amr/files/styles/full_size_view/public/2020-12/evtol-aircraft.jpg?h=56e4a533&itok=yZBdi2vs",
             description: "Created a multimedia content series on urban air mobility, covering eVTOL technology, infrastructure needs, and societal impact.",
             stats: {
-                videoViews: "1.5M",
-                shares: "50k+",
-                industryPartnerships: "10"
+                views: "100k+",
+                articles: "15+",
+                shares: "5k+"
             },
-            cta: "Watch the Series"
+            cta: "Explore Series"
         }
     ];
 
