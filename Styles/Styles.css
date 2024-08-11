@@ -1592,7 +1592,7 @@ p.instruction {
     font-size: 16px; /* Smaller font size for the label */
     color: #666; /* Lighter color for the label */
     line-height: normal;
-    font-family: OpenSauceOne-Bold;
+  
 }
 .project-cta-button {
   display: inline-block;
