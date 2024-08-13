@@ -9063,3 +9063,59 @@ html {
   a.w-webflow-badge {
     display: none;
 }
+
+.content-strategy-glance {
+  /*background-color: #f9f9f9;*/
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /*-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);*/
+  margin-bottom: 100px;
+}
+
+.content-strategy-glance h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.strategy-card {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.strategy-card h3 {
+  font-size: 1.5rem;
+  color: #0073e6;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.strategy-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.strategy-card ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  padding-left: 20px;
+  position: relative;
+}
+
+.strategy-card ul li:before {
+  content: "•";
+  color: #0073e6;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
