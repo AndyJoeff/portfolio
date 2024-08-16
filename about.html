@@ -100,7 +100,7 @@ p {
 h2 {
     color: var(--color--secondary-color);
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     font-family: Poppins Semi Bold, sans-serif;
     font-size: 40px;
     font-weight: 600;
@@ -467,7 +467,7 @@ img {
 #my-approach {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 4rem 0;
 }
 
 .approach-pillar {
@@ -498,7 +498,7 @@ img {
 }
 
 .approach-pillar h3 {
-    color: #3a7bd5;
+    
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -581,7 +581,10 @@ img {
   transform: scale(1);
 }
 
- 
+.container h2 {
+    font-size: 32px;
+} 
+
 @media screen and (min-width: 1280px) {
     .about-hero-grid {
         grid-column-gap: 80px;
@@ -943,45 +946,47 @@ observer.observe(el);
 </div>
 </section>
 <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-section about">
-        <h3>About Me</h3>
-        <p>Specialized in crafting compelling narratives at the intersection of aviation and sustainability. Bringing complex ideas to life through strategic content.</p>
-        <div class="social-links">
-          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-        </div>
-      </div>
-      <div class="footer-section quick-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact">
-        <h3>Contact Me</h3>
-        <p><i class="fas fa-envelope"></i> anditechnovire@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
-        <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-      </div>
-      <div class="footer-section newsletter">
-        <h3>Stay Updated</h3>
-        <p>Subscribe to my newsletter for the latest insights in aviation and sustainability.</p>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
+  <div class="footer-upper-wrapper">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>About Me</h3>
+      <p>Specialized in crafting compelling narratives at the intersection of aviation and sustainability. Bringing complex ideas to life through strategic content.</p>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Andrew Joe. All rights reserved.</p>
-      <p>Designed with <i class="fas fa-heart"></i> for aviation and sustainability</p>
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-section contact">
+      <h3>Contact Me</h3>
+      <p><i class="fas fa-envelope"></i> anditechnovire@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +1 (123) 456-7890</p>
+      <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
+    </div>
+    <div class="footer-section newsletter">
+      <h3>Stay Updated</h3>
+      <p>Subscribe to my newsletter for the latest insights in aviation and sustainability.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required="">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="footer-bottom">
+    © 2024 Andrew Joe. All rights reserved <!--| Designed with <i class="fas fa-heart"></i> for aviation and sustainability-->
+  </div>
+
+</footer>
 </main>
 <script src="Scripts/main.js"></script>
 </body>
