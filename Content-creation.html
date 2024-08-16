@@ -24,50 +24,75 @@
 h1, h2, h3 {
     color: #2c3e50;
 }
-
-.content-section {
-  margin-bottom: 2rem;
-  overflow: hidden; /* Ensures that the float does not affect the layout */
+.service-details-content-wrapper {
+    margin-top: 0; 
 }
 
-.service-details-content-wrapper{
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-flex-container {
+    display: flex;
+   border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.content-image {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.content-text {
+    flex-grow: 1;
+}
+
+.content-text h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-family: 'Poppins-semibold';
+}
+
+.content-text p {
     margin-top: 0;
 }
-
-.content-section img.float-image {
-  float: left;
-  width: 40%;
-  margin-right: 1rem; /* Space between image and text */
-  margin-bottom: 1rem;
-  border-radius: 8px; /* Adds rounded corners to images */
-  margin-top: 0;
-}
-
-.content-section h2, .content-section h3 {
-  clear: both; /* Ensure headings appear correctly above floated content */
-  font-size: 1.75rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-}
-
-.content-section-heading{
-    font-family: 'Poppins-semibold';
-    
-}
-/* Media Queries */
-@media (max-width: 768px) {
-.content-section {
+.service-details img {
+    border-radius: 8px;
+    margin-top: 0; 
     margin-bottom: 0;
-  }
-
-  .content-section-heading {
-      font-size: 30px;
-  }
 }
-@media (max-width: 479px) {
-    .content-section img.float-image {
-   width: 100%;
-  }
+h3.content-section-heading {
+    margin-bottom: 40px;
+    font-family: 'Poppins-semibold';
+}
+
+.service-details p {
+    margin-bottom: 0;
+    font-family: 'Arial';
+}
+
+li{
+    font-family: 'Arial';
+}
+
+@media (max-width: 768px) {
+    .content-flex-container {
+        flex-direction: column-reverse;
+    }
+    h3.content-section-heading{
+        font-size: 28px;
+    }
+    .content-image {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 1rem;
+    }
 }
 </style>
     </head>
@@ -86,7 +111,7 @@ h1, h2, h3 {
                     <li><a href="about.html">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
+                     <li><a href="Contact.html" class="nav-menu-button w-button">Contact me</a></li>
                   </ul>
                 </nav>
               </header>
@@ -132,74 +157,99 @@ h1, h2, h3 {
                                             </p>
                                             <h3 class="content-section-heading">What I Offer</h3>
                                             <div class="content-section">
-                                                <h3>1. Technical Writing</h3>
-                                                <img src="https://cdn.sanity.io/images/mz2hls6g/production/0b5b5e94ac2e6d224f647d35a4795d5a42a233d7-4500x3000.jpg?w=3840&q=75&fit=clip&auto=format" alt="Technical Writing Image" class="float-image">
-                                                <p>With a strong background in aviation, I create precise 
-                                                   and informative technical content that simplifies complex 
-                                                   concepts for engineers, pilots, and aviation professionals. 
-                                                   Whether it’s detailed manuals, safety guidelines, or aircraft 
-                                                   performance reports, my content ensures clarity and accuracy.
-                                                </p>
+                                                <div class="content-flex-container">
+                                                    <img src="https://cdn.sanity.io/images/mz2hls6g/production/0b5b5e94ac2e6d224f647d35a4795d5a42a233d7-4500x3000.jpg?w=3840&q=75&fit=clip&auto=format" alt="Technical Writing Image" class="content-image">
+                                                    <div class="content-text">
+                                                        <h3>1. Technical Writing</h3>
+                                                        <p>With a strong background in aviation, I create precise and informative technical content that simplifies complex 
+                                                           concepts for engineers, pilots, and aviation professionals. Whether it's detailed manuals, safety guidelines, or aircraft 
+                                                           performance reports, my content ensures clarity and accuracy.</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="content-section">
-                                                <h3>2. Social Media Content</h3>
-                                                <img src="https://ineditagency.com/wp-content/uploads/2018/04/how-to-write-social-media-posts-that-sell-3.jpg" alt="Technical Writing Image" class="float-image">
-                                                <p>Engage your audience with impactful social media content 
-                                                   that highlights your brand’s commitment to sustainability
-                                                   in aviation. From bite-sized posts to comprehensive campaigns, 
-                                                   I create content that resonates across platforms 
-                                                   and drives engagement.
-                                                </p>
+                                                <div class="content-flex-container">
+                                                    <img src="https://ineditagency.com/wp-content/uploads/2018/04/how-to-write-social-media-posts-that-sell-3.jpg" alt="Social Media Content Image" class="content-image">
+                                                    <div class="content-text">
+                                                        <h3>2. Social Media Content</h3>
+                                                        <p>Engage your audience with impactful social media content that highlights your brand's commitment to sustainability
+                                                           in aviation. From bite-sized posts to comprehensive campaigns, I create content that resonates across platforms 
+                                                           and drives engagement.</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="content-section">
-                                                <h3>3. Engaging Video Content</h3>
-                                                <img src="https://zeus-zukunft.de/wp-content/uploads/2023/08/shutterstock_1966256767-2000x1125.jpg" alt="Technical Writing Image" class="float-image">
-                                                <p>Whether it's an explainer video on sustainable aviation 
-                                                   fuels or a documentary-style piece on eco-friendly airport 
-                                                   initiatives, I create visually compelling content that 
-                                                   resonates with audiences, conveying complex concepts 
-                                                   in an accessible way.
-                                                </p>
+                                                <div class="content-flex-container">
+                                                     <img src="https://zeus-zukunft.de/wp-content/uploads/2023/08/shutterstock_1966256767-2000x1125.jpg" alt="Technical Writing Image" class="content-image">
+                                                     <div class="content-text">
+                                                        <h3>3. Engaging Video Content</h3>
+                                                        <p>Whether it's an explainer video on sustainable aviation fuels 
+                                                           or a documentary-style piece on eco-friendly airport initiatives, 
+                                                           I create visually compelling content that resonates with audiences, 
+                                                           conveying complex concepts in an accessible way.</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="content-section">
-                                                <h3>4. Informative Blog Posts & Articles</h3>
-                                                <img src="https://brands-up.ch/public/images/uploads/97bc703442fa9a38ed92e3047355fb18486c1219.png" alt="Technical Writing Image" class="float-image">
-                                                <p>I write in-depth articles that explore the latest trends in 
-                                                    sustainable aviation, from carbon offset programs to the 
-                                                    development of electric aircraft. These pieces are designed 
-                                                    to educate your audience and establish your brand as a 
-                                                    thought leader in the industry.
-                                                </p>
+                                                <div class="content-flex-container">
+                                                    <img src="https://brands-up.ch/public/images/uploads/97bc703442fa9a38ed92e3047355fb18486c1219.png" alt="Technical Writing Image" class="content-image">
+                                                     <div class="content-text">
+                                                        <h3>4. Informative Blog Posts & Articles</h3>
+                                                        <p>I write in-depth articles that explore the 
+                                                           latest trends in sustainable aviation, from 
+                                                           carbon offset programs to the development of 
+                                                           electric aircraft. These pieces are designed to 
+                                                           educate your audience and establish your brand 
+                                                           as a thought leader in the industry.
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
+                                    
                                             <div class="content-section">
-                                                <h3>5. E-Books & White Papers</h3>
-                                                <!--<img src="./Content Strategist_files/content-strategy(1).jpg" alt="Technical Writing Image" class="float-image">-->
-                                                <p>Dive deep into the critical issues of sustainability 
-                                                    in aviation with well-researched e-books and white papers. 
-                                                    These comprehensive documents provide valuable insights that 
-                                                    can influence policy, drive innovation, and position your 
-                                                    brand as a leader in sustainable practices.
-                                                </p>
+                                                <div class="content-flex-container">
+                                                 <!--<img src="https://brands-up.ch/public/images/uploads/97bc703442fa9a38ed92e3047355fb18486c1219.png" alt="Technical Writing Image" class="content-image">-->
+                                                     <div class="content-text">
+                                                        <h3>5. E-Books & White Papers</h3>
+                                                       <p>Dive deep into the critical issues of sustainability 
+                                                         in aviation with well-researched e-books and white papers. 
+                                                         These comprehensive documents provide valuable insights that 
+                                                         can influence policy, drive innovation, and position your 
+                                                         brand as a leader in sustainable practices.
+                                                       </p>
+                                                    </div>
+                                                </div>
                                             </div>
+                                          
                                             <div class="content-section">
-                                                <h3>6. Infographics & Visual Content</h3>
-                                                <img src="https://helpx.adobe.com/content/dam/help/en/illustrator/how-to/digital-infographics/jcr_content/main-pars/image_246833377/digital-infographics-step1_900x506.jpg" alt="Technical Writing Image" class="float-image">
-                                                <p>Simplify complex data and trends with visually appealing 
-                                                    infographics that capture the essence of sustainable practices 
-                                                    in aviation. These are perfect for sharing on social media or 
-                                                    including in presentations to convey your message quickly and effectively.
-                                                </p>
-                                            </div>
-                                            <div class="content-section">
-                                                <h3>7. Case Studies</h3>
-                                                <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/180205215/original/6a8fbadbab4b7abe137a7818912f37a2b36100a0/research-and-analyze-technical-and-business-case-studies.jpg" alt="Technical Writing Image" class="float-image">
-                                                <p>Showcase your success stories with detailed case studies that 
-                                                    highlight the impact of your sustainable practices. 
-                                                    From reducing carbon emissions to implementing green 
-                                                    technologies, these case studies will demonstrate your 
-                                                    brand's commitment to sustainability.
-                                                </p>
-                                            </div>
+                                                <div class="content-flex-container">
+                                                    <img src="https://helpx.adobe.com/content/dam/help/en/illustrator/how-to/digital-infographics/jcr_content/main-pars/image_246833377/digital-infographics-step1_900x506.jpg" alt="Technical Writing Image" class="content-image">
+                                                     <div class="content-text">
+                                                        <h3>6. Infographics & Visual Content</h3>
+                                                       <p>Simplify complex data and trends with visually appealing 
+                                                          infographics that capture the essence of sustainable practices 
+                                                          in aviation. These are perfect for sharing on social media or 
+                                                          including in presentations to convey your message quickly and effectively.
+                                                       </p>
+                                                     </div>
+                                                  </div>
+                                               </div>
+                                    
+                                                <div class="content-section">
+                                                <div class="content-flex-container">
+                                                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/180205215/original/6a8fbadbab4b7abe137a7818912f37a2b36100a0/research-and-analyze-technical-and-business-case-studies.jpg" alt="Technical Writing Image" class="content-image">
+                                                     <div class="content-text">
+                                                       <h3>7. Case Studies</h3>
+                                                       <p>Showcase your success stories with detailed case studies that 
+                                                          highlight the impact of your sustainable practices. 
+                                                          From reducing carbon emissions to implementing green 
+                                                          technologies, these case studies will demonstrate your 
+                                                          brand's commitment to sustainability.
+                                                       </p>
+                                                     </div>
+                                                  </div>
+                                               </div>
+                                    
 
                                             <blockquote>Contact us today to begin the journey of transforming your ideas into visually stunning and user-centric digital solutions with Folxo.</blockquote>
                                             <h3>Why Choose My Services?</h3>
@@ -257,7 +307,6 @@ h1, h2, h3 {
                                             <ol start="" role="list">
                                                 <li>Schedule a free consultation</li>
                                                 <li>View my portfolio</li>
-                                                <li>Download my content strategy guide</li>
                                             </ol>
                                         </div>
                                     </div>
@@ -267,7 +316,7 @@ h1, h2, h3 {
                                         <div class="service-link-list-wrapper w-dyn-list">
                                             <div role="list" class="service-link-list w-dyn-items">
                                                 <div role="listitem" class="service-link-list-item w-dyn-item">
-                                                    <a href="/services/ui-ux-design" aria-current="page" class="service-sidebar-link-block w-inline-block w--current">
+                                                    <a href="content-strategy.html" aria-current="page" class="service-sidebar-link-block w-inline-block w--current">
                                                         <div class="service-link-text"> Content Strategist</div>
                                                         <div class="service-sidebar-link-icon w-embed">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -278,7 +327,7 @@ h1, h2, h3 {
                                                     </a>
                                                 </div>
                                                 <div role="listitem" class="service-link-list-item w-dyn-item">
-                                                    <a href="/services/web-design" class="service-sidebar-link-block w-inline-block">
+                                                    <a href="Content-creation.html" class="service-sidebar-link-block w-inline-block">
                                                         <div class="service-link-text">Content creation</div>
                                                         <div class="service-sidebar-link-icon w-embed">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -289,7 +338,7 @@ h1, h2, h3 {
                                                     </a>
                                                 </div>
                                                 <div role="listitem" class="service-link-list-item w-dyn-item">
-                                                    <a href="/services/prototyping" class="service-sidebar-link-block w-inline-block">
+                                                    <a href="seo-optimization.html" class="service-sidebar-link-block w-inline-block">
                                                         <div class="service-link-text">SEO Optimization</div>
                                                         <div class="service-sidebar-link-icon w-embed">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -312,7 +361,7 @@ h1, h2, h3 {
                                                 </div>
                                                 <div role="listitem" class="service-link-list-item w-dyn-item">
                                                     <a href="/services/app-design" class="service-sidebar-link-block w-inline-block">
-                                                        <div class="service-link-text">Website development</div>
+                                                        <div class="service-link-text">Web development</div>
                                                         <div class="service-sidebar-link-icon w-embed">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                                                 <path d="M17.3352 8L23.2906 15.1464C23.6307 15.5545 23.8008 15.7587 23.8008 16C23.8008 16.2413 23.6307 16.4455 23.2906 16.8536L17.3352 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

@@ -8,127 +8,141 @@
 <head>
     <!-- CSS Styling -->
   <style>
-    .service-section {
-      padding: 60px 20px;
-      background-color: #f9f9f9;
-    }
-  
-    .service-header h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-  
-    .service-header p {
-      font-size: 18px;
-      color: #555;
-    }
-  
-    .what-i-offer h2, .why-choose-services h2, .call-to-action h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-  
+    h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.content-creation {
+    margin: 2rem 0;
+}
+
+.content-creation h2, .content-creation h3, .content-creation h4 {
+    color: #2d2d2d;
+}
+
+.content-creation p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.service-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 8px;
+}
+
+.service-item h4 {
+    margin: 0 0 0.5rem 0;
+}
+
+.service-item p {
+    margin: 0;
+}
+
+.content-creation ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.content-creation ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
     .service-item {
-      margin-bottom: 40px;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
+
     .service-item img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin-bottom: 20px;
+        margin-bottom: 1rem;
+        margin-right: 0;
+        width: 100%;
+        max-width: 300px;
     }
-  
-    .service-item h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-  
-    .service-item p {
-      font-size: 16px;
-      color: #666;
-    }
-  
-    .why-choose-services ul {
-      list-style-type: none;
-      padding: 0;
-    }
-  
-    .why-choose-services li {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-  
-    .call-to-action p {
-      font-size: 18px;
-      color: #444;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+}
+
   </style>
   
 </head>
 <body>
 <!-- Content Creation Service Section -->
-<section id="content-creation" class="service-section">
-    <div class="container">
-      <!-- Header Section -->
-      <header class="service-header">
-        <h1>Transforming Ideas into Impactful Words</h1>
-        <p>In a world where content is king, I serve as your scribe, crafting words that do more than fill a page—they connect, inspire, and drive action. Whether you're in aviation, sustainability, or beyond, my content writing services are tailored to amplify your voice and resonate with your audience.</p>
-      </header>
+<section class="content-creation">
+  <h2>Transforming Ideas into Impactful Words</h2>
+  <p>In a world where content is king, I serve as your scribe, crafting words that do more than fill a page—they connect, inspire, and drive action. Whether you're in aviation, sustainability, or beyond, my content writing services are tailored to amplify your voice and resonate with your audience.</p>
   
-      <!-- What I Offer Section -->
-      <div class="what-i-offer">
-        <h2>What I Offer</h2>
+  <h3>What I Offer</h3>
   
-        <!-- Service Item 1 -->
-        <div class="service-item">
-          <img src="path/to/your-image1.jpg" alt="Technical Writing Image" class="service-image"/>
-          <h3>Technical Writing</h3>
-          <p>With a strong background in aviation, I create precise and informative technical content that simplifies complex concepts for engineers, pilots, and aviation professionals. Whether it’s detailed manuals, safety guidelines, or aircraft performance reports, my content ensures clarity and accuracy.</p>
-        </div>
+  <div class="service-item">
+      <img src="path/to/technical-writing-image.jpg" alt="Technical Writing">
+      <h4>Technical Writing</h4>
+      <p>With a strong background in aviation, I create precise and informative technical content that simplifies complex concepts for engineers, pilots, and aviation professionals. Whether it’s detailed manuals, safety guidelines, or aircraft performance reports, my content ensures clarity and accuracy.</p>
+  </div>
   
-        <!-- Service Item 2 -->
-        <div class="service-item">
-          <img src="path/to/your-image2.jpg" alt="Social Media Content Image" class="service-image"/>
-          <h3>Social Media Content</h3>
-          <p>Engage your audience with impactful social media content that highlights your brand’s commitment to sustainability in aviation. From bite-sized posts to comprehensive campaigns, I create content that resonates across platforms and drives engagement.</p>
-        </div>
+  <div class="service-item">
+      <img src="path/to/social-media-content-image.jpg" alt="Social Media Content">
+      <h4>Social Media Content</h4>
+      <p>Engage your audience with impactful social media content that highlights your brand’s commitment to sustainability in aviation. From bite-sized posts to comprehensive campaigns, I create content that resonates across platforms and drives engagement.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/engaging-video-content-image.jpg" alt="Engaging Video Content">
+      <h4>Engaging Video Content</h4>
+      <p>Whether it's an explainer video on sustainable aviation fuels or a documentary-style piece on eco-friendly airport initiatives, I create visually compelling content that resonates with audiences, conveying complex concepts in an accessible way.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/blog-posts-image.jpg" alt="Informative Blog Posts & Articles">
+      <h4>Informative Blog Posts & Articles</h4>
+      <p>I write in-depth articles that explore the latest trends in sustainable aviation, from carbon offset programs to the development of electric aircraft. These pieces are designed to educate your audience and establish your brand as a thought leader in the industry.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/ebooks-whitepapers-image.jpg" alt="E-Books & White Papers">
+      <h4>E-Books & White Papers</h4>
+      <p>Dive deep into the critical issues of sustainability in aviation with well-researched e-books and white papers. These comprehensive documents provide valuable insights that can influence policy, drive innovation, and position your brand as a leader in sustainable practices.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/infographics-image.jpg" alt="Infographics & Visual Content">
+      <h4>Infographics & Visual Content</h4>
+      <p>Simplify complex data and trends with visually appealing infographics that capture the essence of sustainable practices in aviation. These are perfect for sharing on social media or including in presentations to convey your message quickly and effectively.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/case-studies-image.jpg" alt="Case Studies">
+      <h4>Case Studies</h4>
+      <p>Showcase your success stories with detailed case studies that highlight the impact of your sustainable practices. From reducing carbon emissions to implementing green technologies, these case studies will demonstrate your brand's commitment to sustainability.</p>
+  </div>
+
+  <div class="service-item">
+      <img src="path/to/podcast-production-image.jpg" alt="Podcast Production">
+      <h4>Podcast Production</h4>
+      <p>Leverage the power of audio to reach your audience with podcasts that discuss key topics in aviation and sustainability. Whether it’s interviews with industry leaders or deep dives into the latest innovations, I create content that informs and engages.</p>
+  </div>
+
+  <h3>Why Choose My Services?</h3>
+  <p>(few content here)</p>
+  <ul>
+      <li>Industry Expertise: With experience in both aviation and sustainability, I understand the unique challenges and opportunities within these fields. My content reflects a deep understanding of industry trends and regulations.</li>
+      <li>Customized Approach: I tailor my writing to match your brand’s voice and goals, ensuring that every piece of content aligns with your vision and speaks to your target audience.</li>
+      <li>Precision and Clarity: I ensure every word serves a purpose, delivering your message with clarity and precision. From blog posts to technical articles, my content is meticulously crafted to engage and inform.</li>
+      <li>Storytelling with Impact: I don’t just write; I tell stories that matter. By weaving narratives that highlight the significance of your work, I help you build a connection with your audience, turning readers into loyal followers.</li>
+      <li>SEO-Optimized Content: Every piece of content is optimized for search engines without sacrificing readability. I make sure your content not only reaches your audience but also ranks well in search engines.</li>
+      <li>Adaptable Tone and Style: Whether you need a professional, authoritative tone or a more conversational, approachable style, I adapt my writing to fit your brand's voice and the needs of your target audience.</li>
+      <li>Proven Results: My content has helped brands in the aviation and sustainability sectors increase their online presence, engage their audience, and drive meaningful action.</li>
+  </ul>
   
-        <!-- Service Item 3 -->
-        <div class="service-item">
-          <img src="path/to/your-image3.jpg" alt="Engaging Video Content Image" class="service-image"/>
-          <h3>Engaging Video Content</h3>
-          <p>Whether it's an explainer video on sustainable aviation fuels or a documentary-style piece on eco-friendly airport initiatives, I create visually compelling content that resonates with audiences, conveying complex concepts in an accessible way.</p>
-        </div>
-  
-        <!-- Additional Service Items -->
-        <!-- Follow the same structure for the remaining service items (Blog Posts, E-Books, Infographics, etc.) -->
-      </div>
-  
-      <!-- Why Choose My Services Section -->
-      <div class="why-choose-services">
-        <h2>Why Choose My Services?</h2>
-        <ul>
-          <li><strong>Industry Expertise:</strong> With experience in both aviation and sustainability, I understand the unique challenges and opportunities within these fields. My content reflects a deep understanding of industry trends and regulations.</li>
-          <li><strong>Customized Approach:</strong> I tailor my writing to match your brand’s voice and goals, ensuring that every piece of content aligns with your vision and speaks to your target audience.</li>
-          <li><strong>Precision and Clarity:</strong> I ensure every word serves a purpose, delivering your message with clarity and precision. From blog posts to technical articles, my content is meticulously crafted to engage and inform.</li>
-          <li><strong>Storytelling with Impact:</strong> I don’t just write; I tell stories that matter. By weaving narratives that highlight the significance of your work, I help you build a connection with your audience, turning readers into loyal followers.</li>
-          <li><strong>SEO-Optimized Content:</strong> Every piece of content is optimized for search engines without sacrificing readability. I make sure your content not only reaches your audience but also ranks well in search engines.</li>
-          <li><strong>Adaptable Tone and Style:</strong> Whether you need a professional, authoritative tone or a more conversational, approachable style, I adapt my writing to fit your brand's voice and the needs of your target audience.</li>
-          <li><strong>Proven Results:</strong> My content has helped brands in the aviation and sustainability sectors increase their online presence, engage their audience, and drive meaningful action.</li>
-        </ul>
-      </div>
-  
-      <!-- Call to Action Section -->
-      <div class="call-to-action">
-        <h2>Let’s Take Your Brand to New Heights</h2>
-        <p>Whether you're looking to educate, inspire, or lead the conversation in aviation and sustainability, my content writing services provide the expertise and creativity you need. Let’s collaborate to create content that not only informs but also drives change.</p>
-      </div>
-    </div>
-  </section>
+  <h3>Let’s Take Your Brand to New Heights</h3>
+  <p>Whether you're looking to educate, inspire, or lead the conversation in aviation and sustainability, my content writing services provide the expertise and creativity you need. Let’s collaborate to create content that not only informs but also drives change.</p>
+</section>
  </body>
   </html>
