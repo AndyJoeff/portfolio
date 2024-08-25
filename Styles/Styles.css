@@ -13,10 +13,6 @@
     src: url('helvetica.woff2');
   }
   @font-face {
-    font-family: 'OpenSauceOne-Bold'; 
-    src: url('OpenSauceOne-Bold\ \(1\).woff');
-  }
-  @font-face {
     font-family: 'Poppins-semibold'; 
     src: url('Poppins-SemiBold.ttf');
   }
@@ -26,10 +22,6 @@
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-  }
-  @font-face {
-    font-family: Atlas-Grotesk-Bold-1; 
-    src: url('Atlas-Grotesk-Bold-1.ttf');
   }
 
   @font-face {
@@ -47,7 +39,23 @@
     font-style: normal;
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'ArialBD';
+    src: url('ARIALBD\ 1.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
   
+  @font-face {
+    font-family: 'ArialIT';
+    src: url('ArialCEItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
   /* General Styles */
   * {
     margin: 0;

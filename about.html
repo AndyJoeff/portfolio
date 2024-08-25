@@ -7,8 +7,10 @@
   <title>Andrew Joe - Content Specialist</title>
   <link rel="stylesheet" href="Styles/Styles.css">
   <link rel="icon" href="favicon.icon" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous"></script>
+ 
   <style>
 
 :root {
@@ -59,18 +61,16 @@ html {
 
 body {
   color: #333;
-  background-color: #fff;
+  background-color: #f4f4f4;
   min-height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 14px;
   line-height: 20px;
 }
 
 body {
   color: var(--color--paragraph-color);
   font-family: Poppins Regular, sans-serif;
-  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -295,7 +295,9 @@ img {
     transition: transform 0.05s ease;
 }
 
-
+h2.section-heading {
+    margin: 0;
+}
 
 #about-me {
   background-color: #f8f9fa;
@@ -322,10 +324,10 @@ img {
     margin-bottom: 20px;
   }
 
-.container {
+.container-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 80px 0px;
   color: black;
 }
 
@@ -350,8 +352,9 @@ img {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
+  display: flex;
 }
 
 .profile-section {
@@ -385,7 +388,8 @@ img {
   color: #3498db;
 }
 
-.bio-section, .expertise-section, .timeline-section, .cta-section {
+
+.bio-section, .expertise-grid, .cta-section {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -393,10 +397,27 @@ img {
   /*margin-bottom: 40px;*/
 }
 
+.expertise-section {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+}
+
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.cta-section {
+    margin: 0 20px;
+}
+
+.cta-section p {
+    margin-bottom: 32px;
 }
 
 .expertise-item {
@@ -417,12 +438,210 @@ img {
   margin-bottom: 10px;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 30px;
+.expertise-item h3 {
+    font-family: 'Poppins Regular';
+    FONT-SIZE: 18px;
 }
 
-.timeline::before {
+.timeline {
+  position: relative;
+ 
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    margin-left: -4.4px;
+}
+
+.timeline-section {
+    padding: 0 20px;
+    flex: 2;
+}
+.timeline-section h2:first-child {
+    max-width: 693.33px;
+}
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    box-sizing: border-box;
+}
+
+.container:last-child {
+    padding-bottom: 0;
+}
+
+.container:first-child {
+    padding-top: 0;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #3498db;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.right::after {
+    left: -1px;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #fff;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+@media screen and (max-width: 600px) {
+    .left::after, .right::after {
+        left: -10px;
+        width: 15px;
+        height: 15px;
+        top: 20px;
+    }
+    .right::before{
+        left: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline::after {
+        left: 4px;
+        width: 4px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 25px;
+    }
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.date {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 10px;
+    font-family: 'Poppins Semi Bold';
+}
+
+.company {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.position {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.achievements {
+    margin-top: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill {
+    background-color: #ecf0f1;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.achievements ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
+a.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'poppins-semibold';
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px 
+}
+
+.key-projects {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+ }
+.project {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ecf0f1;
+}
+.project:last-child {
+    border-bottom: none;
+}
+.project h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+.project-description {
+    font-size: 0.9em;
+    color: #555;
+}
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+.project-link:hover {
+    text-decoration: underline;
+}
+.sidebar {
+            flex: 1;
+        }
+/*.timeline::before {
   content: '';
   position: absolute;
   left: 0;
@@ -447,6 +666,7 @@ img {
   border-radius: 50%;
   background-color: #3498db;
 }
+  */
 
 /*.cta-button {
   display: inline-block;
@@ -467,13 +687,15 @@ img {
 #my-approach {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 4rem 20px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .approach-pillar {
     display: flex;
-    margin-bottom: 4rem;
-    background-color: #f8f8f8;
+    margin-bottom: 80px;
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -483,24 +705,32 @@ img {
     flex-direction: row-reverse;
 }
 
-.pillar-content, .pillar-image {
-    flex: 1;
+.pillar-image {
+    flex: 1.2;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
 }
 
 .pillar-content {
     padding: 3rem;
+    flex: 2;
 }
 
-.pillar-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media screen and (max-width: 600px) {
+    .pillar-content {
+        padding: 2rem;
+    }
 }
 
 .approach-pillar h3 {
     
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-family: 'Poppins-semibold';
+}
+strong {
+    font-family: 'Poppins-semibold';
 }
 
 .approach-pillar p {
@@ -517,47 +747,157 @@ img {
     font-size: 1em;
     color: #333;
 }
+
+section#samples {
+    padding: 20px 20px 4rem;
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.filter-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+.filter-button:hover, .filter-button.active {
+    background-color: #2980b9;
+}
+.samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.sample-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.sample-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.sample-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    vertical-align: baseline;
+}
+.sample-content {
+    padding: 20px;
+    font-family: 'Arial';
+}
+.sample-category {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.sample-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-family: 'poppins-semibold';
+    margin-top: 1em;
+}
+.sample-excerpt {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+.sample-meta {
+    font-size: 0.8em;
+    color: #95a5a6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sample-client {
+    font-weight: bold;
+    font-family: 'ArialBD';
+}
+.sample-stats {
+    display: flex;
+    gap: 10px;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;     
+}
+.content-type-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255,255,255,0.8);
+    padding: 5px;
+    border-radius: 50%;
+}
+
 .digit-container {
-            display: flex;
-            font-size: 44px;
-            font-family: 'Poppins medium';
-            overflow: hidden;
-        }
-        .digit {
-            width: 28px;
-            height: 60px;
-            line-height: 60px;
-            text-align: center;
-            position: relative;
-            color: black;
-        }
-        .digit-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 600px;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-        }
-        #digit1 .digit-content {
-            animation-name: scrollUp;
-        }
-        #digit2 .digit-content {
-            animation-name: scrollDown;
-        }
-        #digit3 .digit-content {
-            animation-name: scrollUp;
-        }
-        @keyframes scrollUp {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-540px); }
-        }
-        @keyframes scrollDown {
-            0% { transform: translateY(-540px); }
-            100% { transform: translateY(0); }
-        }
+    display: flex;
+    font-size: 44px;
+    font-family: 'Poppins medium';
+    overflow: hidden;
+}
+.digit {
+    width: 28px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    color: black;
+}
+.digit-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+       
+#digit1 .digit-content {
+    animation-name: scrollUp;
+}
+        
+#digit2 .digit-content {
+    animation-name: scrollDown;
+}
+
+#digit3 .digit-content {
+    animation-name: scrollUp;
+}
+
+@keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-540px); }
+}
+
+@keyframes scrollDown {
+    0% { transform: translateY(-540px); }
+    100% { transform: translateY(0); }
+}
 
 .animate-on-scroll {
   opacity: 0;
@@ -581,8 +921,12 @@ img {
   transform: scale(1);
 }
 
-.container h2 {
+.container-wrapper h2 {
     font-size: 32px;
+    text-align: center;
+    color: #050b1b;
+   /* border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;*/
 } 
 
 @media screen and (min-width: 1280px) {
@@ -618,6 +962,9 @@ img {
   .container-default {
     max-width: 1170px;
   }
+  .digit-container{
+    height: 53px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -638,12 +985,16 @@ img {
 }
 
 @media (max-width: 768px) {
+
+    .container-wrapper h2{
+        font-size: 28px;
+    }
     .approach-pillar, .approach-pillar:nth-child(even) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     
     .pillar-image {
-        height: 300px;
+        min-height: 200px;
     }
 
     .about-hero-shape-one {
@@ -658,6 +1009,7 @@ img {
 
   .about-content {
       grid-template-columns: 1fr;
+      flex-direction: column-reverse;
   }
   .about-header h1{
       font-size: 2rem;
@@ -715,28 +1067,178 @@ img {
     top: -20px;
   }
 }
+         .testimonial-section{
+            padding: 20px 20px 4rem;
+         }
+
+        .testimonial-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            
+        }
+        .testimonial-slide {
+            display: none;
+            padding: 40px;
+            text-align: center;
+        }
+        .testimonial-content-ab {
+            font-size: 1.1em;
+            font-family: 'ArialIT';
+            margin: 1em 0;
+            padding: 0 10px;
+            
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #3498db;
+            margin: 0;
+            font-size: 16px;
+        }
+        .testimonial-company {
+            color: #7f8c8d;
+            margin: 5px;
+            font-size: 16px;
+        }
+        .client-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+        
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #3498db;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        @media (max-width: 600px) { 
+            .prev, .next {
+              font-size: 12px;
+    }
+    
+}
+        
+.cta-container {
+           
+
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1c3d5a, #0a192f);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #fff;
+        }
+        .cta-heading {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .cta-subheading {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .cta-container h2 {
+    color: #fff;
+}
+        .primary-button {
+            background-color: #ff6347;
+            color: #ffffff;
+        }
+        .primary-button:hover {
+            background-color: #f1c40f;
+            color: #2c3e50;
+        }
+        .secondary-button {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        .secondary-button:hover {
+            background-color: #fff;
+            color: #3498db;
+        }
+        @media (max-width: 600px) {
+            .cta-heading {
+                font-size: 2em;
+            }
+            .cta-subheading {
+                font-size: 1em;
+            }
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 1em;
+            }
+            .cta-container {
+           margin: 0 20px;
+            }
+        }
+
   </style>
   <script>
-     document.addEventListener('DOMContentLoaded', function() {
-  const timeline = document.querySelector('.timeline');
-  const timelineItems = [
-      { year: '2021', event: 'Led sustainability content strategy for major airline' },
-      { year: '2019', event: 'Published book on eco-friendly aviation practices' },
-      { year: '2017', event: 'Launched aviation sustainability blog' },
-      { year: '2015', event: 'Joined leading aviation consultancy as content strategist' },
-      { year: '2012', event: 'Completed Master\'s in Environmental Communication' }
-  ];
-
-  timelineItems.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'timeline-item';
-      div.innerHTML = `
-          <h4>${item.year}</h4>
-          <p>${item.event}</p>
-      `;
-      timeline.appendChild(div);
-  });
-});
+    
   </script>
  <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
@@ -784,16 +1286,17 @@ observer.observe(el);
                             <div class="section-heading-wrapper">
                                 <div class="subtitle-wrapper">
                                     <div class="subtitle-line"></div>
-                                    <div class="subtitle-text">Andrew Joe</div>
+                                    <div class="subtitle-text">About me</div>
                                 </div>
                                 <div class="section-heading-block max-width-570px">
-                                    <h2 class="section-heading">Unveiling the creative force within</h2>
+                                    <h2 class="section-heading">Welcome to my world of words</h2>
                                 </div>
                                 <div data-w-id="8e6b414c-508b-d9e2-9a94-46f7537df7fc" class="section-parapraph-block">
-                                    <p class="section-paragraph">My work transforms complex aviation concepts into compelling stories that inspire change. This isn't just my portfolio—it's a launchpad for ideas that make the aerospace industry greener and more innovative.
-        
-                                    </p>
-                                </div>
+                                    <p class="section-paragraph"> 
+                                        I'm Andrew Joe – a content writer who creates impactful, purpose-driven material that drives measurable results for a business.  </p> <p class="section-paragraph"> With strong research skills and a passion for storytelling, I dive deep into subjects to uncover insights that help you connect with your audience on a meaningful level.
+
+
+                                    </p>                      </div>
                             </div>
                             <div class="introduction-fun-fact-wrapper">
                               <div class="counter-block">
@@ -849,42 +1352,71 @@ observer.observe(el);
                 </div>
         </section>
         <section id="about-me"></section>
-            <div class="container">
+            <div class="container-wrapper">
                
                 
                 <div class="about-content"> 
+                    
+                    
+                    
+                    <div class="timeline-section">
+                        <h2>Professional Journey</h2>
+                        <div class="timeline" id="timeline">
+                            <!-- Experience entries will be dynamically added here -->
+                        </div>
+                    </div>
                     
                     <div class="expertise-section">
                         <h2>Areas of Expertise</h2>
                         <div class="expertise-grid">
                             <div class="expertise-item">
-                                <i class="icon-content-strategy"></i>
+                                <i class="fas fa-chart-line"></i> <!-- Content Strategy -->
                                 <h3>Content Strategy</h3>
                             </div>
                             <div class="expertise-item">
-                                <i class="icon-data-visualization"></i>
-                                <h3>Data Visualization</h3>
+                                <i class="fas fa-search"></i> <!-- SEO Writing -->
+                                <h3>SEO Writing</h3>
                             </div>
                             <div class="expertise-item">
-                                <i class="icon-storytelling"></i>
-                                <h3>Brand Storytelling</h3>
+                                <i class="fas fa-cogs"></i> <!-- Technical Writing -->
+                                <h3>Technical Writing</h3>
                             </div>
                             <div class="expertise-item">
-                                <i class="icon-seo"></i>
-                                <h3>SEO Optimization</h3>
+                                <i class="fas fa-pencil-alt"></i> <!-- Creative Writing -->
+                                <h3>Creative Writing</h3>
                             </div>
-                            <!-- Add more expertise items as needed -->
+                            <div class="expertise-item">
+                                <i class="fas fa-copy"></i> <!-- Copywriting -->
+                                <h3>Copywriting</h3>
+                            </div>
+                             <!--<div class="expertise-item">
+                                <i class="fas fa-share-alt"></i> Social Media Content
+                                <h3>Social Media Content</h3>
+                            </div> -->
+                            <!-- You can add more expertise items below as needed -->
                         </div>
+                        
+                      <!--  <h2>Key skills</h2>
+
+                        <div class="key-projects">
+                            <div class="project">
+                                <h3>Sustainability Blog Revamp</h3>
+                                <p class="project-description">Led a complete overhaul of a major environmental blog, resulting in a 150% increase in organic traffic.</p>
+                                <a href="#" class="project-link">View Project</a>
+                            </div>
+                            <div class="project">
+                                <h3>Aviation Industry White Paper</h3>
+                                <p class="project-description">Authored a comprehensive white paper on sustainable aviation practices, garnering over 10,000 downloads.</p>
+                                <a href="#" class="project-link">Read White Paper</a>
+                            </div>
+                            <div class="project">
+                                <h3>E-Learning Content Strategy</h3>
+                                <p class="project-description">Developed and implemented a content strategy for an e-learning platform, increasing user engagement by 75%.</p>
+                                <a href="#" class="project-link">See Case Study</a>
+                            </div>
+                        </div>-->
                     </div>
                     
-                    <div class="timeline-section">
-                        <h2>Professional Journey</h2>
-                        <div class="timeline">
-                            <!-- Timeline items will be added dynamically with JavaScript -->
-                        </div>
-                    </div>
-                    
-                   
                 </div>
           
 
@@ -893,57 +1425,234 @@ observer.observe(el);
                     
                     <div class="approach-pillar foundation">
                         <div class="pillar-content">
-                            <h3>Foundation: Research-Driven Insights</h3>
-                            <p>Every successful content strategy begins with a solid foundation of research. I dive deep into industry trends, audience behaviors, and client goals to uncover valuable insights that drive our content direction.</p>
+                            <h3>Research-Driven Insights</h3>
+                            <p>Every successful content strategy is rooted in a foundation of thorough research.
+                              I dive deep into industry trends, audience behaviors, and client goals to 
+                              uncover actionable insights that shape our content approach.</p>
                             <ul>
-                                <li><strong>Industry Analysis:</strong> Staying ahead of the curve in aviation and sustainability</li>
-                                <li><strong>Audience Segmentation:</strong> Understanding the diverse stakeholders in our field</li>
-                                <li><strong>Data-Driven Decision Making:</strong> Leveraging analytics to inform content strategies</li>
+                                <li><strong>Industry Analysis:</strong> Staying ahead of the curve in industry trends</li>
+                                <li><strong>Audience Segmentation:</strong> Identifying key stakeholders in the field</li>
+                                <li><strong>Data-Driven Decision Making:</strong> Making informed strategies with analytics</li>
                             </ul>
                         </div>
-                        <div class="pillar-image">
-                            <img src="https://media.istockphoto.com/id/1179975275/photo/chart-analyze.jpg?s=612x612&w=0&k=20&c=ArduBscFSkVXb9e7C1fRVoH3o9df96z4N5eAAozRrOk=" alt="Research-Driven Insights">
+                        <div class="pillar-image" style="background-image: url(images/chart-analyze.jpg);">                           
                         </div>
                     </div>
                 
                     <div class="approach-pillar clarity">
                       
                         <div class="pillar-content">
-                            <h3>Pillar 1: Clarity in Complexity</h3>
-                            <p>Aviation and sustainability are complex fields. My approach centers on distilling intricate concepts into clear, accessible content that resonates with both experts and general audiences.</p>
+                            <h3>Engaging Storytelling</h3>
+                            <p>In a crowded content landscape, engaging storytelling
+                                 is crucial. I craft narratives that not only inform 
+                                 but also resonate deeply with your audience, 
+                                 creating lasting connections that 
+                                 drive action.</p>
                             <ul>
-                                <li>Translating technical jargon into engaging narratives</li>
-                                <li>Creating visual aids to simplify complex processes</li>
-                                <li>Developing multi-tiered content to cater to varying levels of expertise</li>
+                                <li><strong>Emotional Connection:</strong> Making your message impactful and memorable </li>
+                                <li><strong>Brand Voice Amplification:</strong> Your unique voice will shine through in every piece</li>
+                                <li><strong>Audience-Centric Narratives:</strong> Tailoring it to audience's specific needs.</li>
                             </ul>
                         </div>
-                        <div class="pillar-image">
-                            <img src="https://st2.depositphotos.com/7865540/10804/i/450/depositphotos_108044648-stock-photo-man-writing-in-notepad.jpg" alt="Clarity in Complexity">
+                        <div class="pillar-image" style="background-image: url(images/Clarity.jpg);">                           
                         </div>
                     </div>
-                
-                    <!-- Repeat similar structure for other pillars -->
+                    <div class="approach-pillar collaborative-synergy">
+                        <div class="pillar-content">
+                            <h3>Data-Driven strategies</h3>
+                            <p>I use data to refine and optimize my content continuously. 
+                                By leveraging various tools and methodologies, I ensure 
+                                that every piece of content serves a purpose and delivers measurable results.
+                        </p>
+                        <ul>
+                            <li><strong>performance Tracking:</strong> Monitoring key metrics for Optimization</li>
+                            <li><strong>SEO Integration:</strong> Your unique voice will shine through in every piece</li>
+                            <li><strong>A/B Testing:</strong> Tailoring it to audience's specific needs.</li>
+                        </ul>
+                        </div>
+                        <div class="pillar-image" style="background-image: url(images/content-strategy.jpg);">                           
+                        </div>
+                    </div>
+                    <!-- Repeat similar structure for other pillars 
                 
                     <div class="approach-pillar collaborative-synergy">
                         <div class="pillar-content">
                             <h3>Collaborative Synergy</h3>
                             <p>While I bring expertise in content strategy, I believe the best results come from collaboration. I work closely with clients, subject matter experts, and creative teams to ensure our content not only informs but inspires and drives meaningful change in the aviation and sustainability sectors.</p>
                         </div>
-                        <div class="pillar-image">
-                            <img src=" https://www.evolvetogrow.com.au/wp-content/uploads/2022/06/still-life-business-roles-with-various-mechanism-pieces-1280x720.webp" alt="Collaborative Synergy">
+                        <div class="pillar-image" style="background-image: url(images/chart-analyze.jpg);">                           
                         </div>
-                    </div>
+                    </div>-->
                 </section>
                   
-                  
+                <section id="samples">
+                    <h2>Writing Samples</h2>
+                    
+                    <div class="filter-buttons">
+                        <button class="filter-button active" data-category="all">All</button>
+                        <button class="filter-button" data-category="blog">Blog Posts</button>
+                        <button class="filter-button" data-category="technical">Technical Writing</button>
+                        <button class="filter-button" data-category="creative">Creative Writing</button>
+                        <button class="filter-button" data-category="marketing">Marketing Copy</button>
+                    </div>
+                
+                    <div class="samples-grid">
+                                <div class="sample-card" data-category="blog">
+                                    <div style="position: relative;">
+                                        <img src="Images/content-strategy.jpg" alt="10 Tips for Effective Content Marketing" class="sample-image">
+                                        <i class="fas fa-blog content-type-icon"></i>
+                                    </div>
+                                    <div class="sample-content">
+                                        <span class="sample-category">blog</span>
+                                        <h3 class="sample-title">10 Tips for Effective Content Marketing</h3>
+                                        <p class="sample-excerpt">Discover proven strategies to elevate your content marketing game and drive engagement.</p>
+                                        <div class="sample-meta">
+                                            <span class="sample-client">Marketing Insider</span>
+                                            <div class="sample-stats"><span>15000 views</span> <span>500 shares</span></div>
+                                        </div>
+                                        <a href="#" class="read-more">View Full Sample</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="sample-card" data-category="technical">
+                                    <div style="position: relative;">
+                                        <img src="Images/video-editing.jpg" alt="Understanding Cloud Computing" class="sample-image">
+                                        <i class="fas fa-file-alt content-type-icon"></i>
+                                    </div>
+                                    <div class="sample-content">
+                                        <span class="sample-category">technical</span>
+                                        <h3 class="sample-title">Understanding Cloud Computing</h3>
+                                        <p class="sample-excerpt">A comprehensive guide to cloud technologies, architectures, and best practices for businesses.</p>
+                                        <div class="sample-meta">
+                                            <span class="sample-client">Tech Solutions Magazine</span>
+                                            <div class="sample-stats"><span>2500 downloads</span></div>
+                                        </div>
+                                        <a href="#" class="read-more">View Full Sample</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="sample-card" data-category="creative">
+                                    <div style="position: relative;">
+                                        <img src="Images/eco-friendly-living.jpg" alt="The Silent Echo" class="sample-image">
+                                        <i class="fas fa-book content-type-icon"></i>
+                                    </div>
+                                    <div class="sample-content">
+                                        <span class="sample-category">creative</span>
+                                        <h3 class="sample-title">The Silent Echo</h3>
+                                        <p class="sample-excerpt">A poignant short story exploring themes of isolation and self-discovery in a digital age.</p>
+                                        <div class="sample-meta">
+                                            <span class="sample-client">Literary Horizons</span>
+                                            <div class="sample-stats"><span>750 likes</span> <span>89 comments</span></div>
+                                        </div>
+                                        <a href="#" class="read-more">View Full Sample</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="sample-card" data-category="marketing">
+                                    <div style="position: relative;">
+                                        <img src="Images/Flight-Booking-Portal.jpg" alt="Revolutionary Gadget X Launch" class="sample-image">
+                                        <i class="fas fa-newspaper content-type-icon"></i>
+                                    </div>
+                                    <div class="sample-content">
+                                        <span class="sample-category">marketing</span>
+                                        <h3 class="sample-title">Revolutionary Gadget X Launch</h3>
+                                        <p class="sample-excerpt">Announcing the arrival of Gadget X, set to transform the way we interact with technology.</p>
+                                        <div class="sample-meta">
+                                            <span class="sample-client">TechCorp Inc.</span>
+                                            <div class="sample-stats"><span>35 media pickups</span></div>
+                                        </div>
+                                        <a href="#" class="read-more">View Full Sample</a>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+               
+    <section class="testimonial-section">
+        <h2>Client Testimonials</h2>
+    <div class="testimonial-container">
+        <div class="testimonial-slide fade">
+            <img src="images/profile-photo.jpg" alt="Emma Rodriguez" class="client-image">
+            <p class="testimonial-content-ab">"Andrew's writing has significantly improved our blog's engagement. His ability to break down complex topics into digestible content is remarkable."</p>
+            <p class="testimonial-author">Sarah Johnson</p>
+            <p class="testimonial-company">Tech Innovators Inc.</p>
+        </div>
 
-    <div class="cta-section" style="text-align: center;">
-        <h2>Let's Connect</h2>
-        <p>Interested in collaborating on aviation or sustainability content projects?</p>
-        <a href="#contact" class="cta-button">Get in Touch</a>
+        <div class="testimonial-slide fade">
+            <img src="images/profile-photo.jpg" alt="Emma Rodriguez" class="client-image">
+            <p class="testimonial-content-ab">"We saw a 40% increase in our website traffic thanks to Andrew's SEO-optimized content. His work is both creative and strategic."</p>
+            <p class="testimonial-author">Michael Chen</p>
+            <p class="testimonial-company">GrowthHackers Digital</p>
+        </div>
+
+        <div class="testimonial-slide fade">
+            <img src="images/profile-photo.jpg" alt="Emma Rodriguez" class="client-image">
+            <p class="testimonial-content-ab">"Andrew's attention to detail and ability to capture our brand voice has made him an invaluable asset to our content team."</p>
+            <p class="testimonial-author">Emma Rodriguez</p>
+            <p class="testimonial-company">Lifestyle Brands Co.</p>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</section>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("testimonial-slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+
+        // Auto-rotate slides every 5 seconds
+        setInterval(function() {
+            plusSlides(1);
+        }, 5000);
+    </script>
+                
+                <div class="cta-container">
+                    <h2 class="cta-heading">Ready to Elevate Your Content?</h2>
+                    <p class="cta-subheading">Let's collaborate to create engaging, impactful content that drives results.</p>
+                    <div class="cta-buttons">
+                        <a href="mailto:your.email@example.com" class="cta-button primary-button">Get in Touch</a>
+                        <a href="#portfolio" class="cta-button secondary-button">View My Work</a>
+                    </div>
+                </div>
 </div>
 </div>
+</section>
+<section id="trusted-by">
+    <h2>Trusted By Industry Leaders</h2>
+    <div class="trust-container">
+        <div class="trust-slider" style="width: 3220px;">
+            <!-- Logos will be dynamically inserted here -->
+        <div class="trust-logo"><img src="	https://eepower.com/images/site/Logo-Large.png" alt="Airline 1 logo"></div><div class="trust-logo"><img src="https://thepilotnetwork.com/cdn/shop/files/TPN-Logo-Words-Logo-Black-Transparent_360x.png?v=1614316240" alt="Sustainability Org 1 logo"></div><div class="trust-logo"><img src="images/centec%20logo.png" alt="Airport 1 logo"></div><div class="trust-logo"><img src="images/RealGXlogo.png" alt="Aviation Tech 1 logo"></div><div class="trust-logo"><img src="https://simpleflying.com/public/build/images/sf-logo-full-colored-dark.svg?v=3.0" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.avient.com/themes/upward/fluid/images/footer-logo.svg" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.dixongolf.com/assets/img/DixonGolf_Logo_HiRes_TransparentBG_RGB.png" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="	https://eepower.com/images/site/Logo-Large.png" alt="Airline 1 logo"></div><div class="trust-logo"><img src="https://thepilotnetwork.com/cdn/shop/files/TPN-Logo-Words-Logo-Black-Transparent_360x.png?v=1614316240" alt="Sustainability Org 1 logo"></div><div class="trust-logo"><img src="images/centec%20logo.png" alt="Airport 1 logo"></div><div class="trust-logo"><img src="images/RealGXlogo.png" alt="Aviation Tech 1 logo"></div><div class="trust-logo"><img src="https://simpleflying.com/public/build/images/sf-logo-full-colored-dark.svg?v=3.0" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.avient.com/themes/upward/fluid/images/footer-logo.svg" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.dixongolf.com/assets/img/DixonGolf_Logo_HiRes_TransparentBG_RGB.png" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="	https://eepower.com/images/site/Logo-Large.png" alt="Airline 1 logo"></div><div class="trust-logo"><img src="https://thepilotnetwork.com/cdn/shop/files/TPN-Logo-Words-Logo-Black-Transparent_360x.png?v=1614316240" alt="Sustainability Org 1 logo"></div><div class="trust-logo"><img src="images/centec%20logo.png" alt="Airport 1 logo"></div><div class="trust-logo"><img src="images/RealGXlogo.png" alt="Aviation Tech 1 logo"></div><div class="trust-logo"><img src="https://simpleflying.com/public/build/images/sf-logo-full-colored-dark.svg?v=3.0" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.avient.com/themes/upward/fluid/images/footer-logo.svg" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.dixongolf.com/assets/img/DixonGolf_Logo_HiRes_TransparentBG_RGB.png" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="	https://eepower.com/images/site/Logo-Large.png" alt="Airline 1 logo"></div><div class="trust-logo"><img src="https://thepilotnetwork.com/cdn/shop/files/TPN-Logo-Words-Logo-Black-Transparent_360x.png?v=1614316240" alt="Sustainability Org 1 logo"></div><div class="trust-logo"><img src="images/centec%20logo.png" alt="Airport 1 logo"></div><div class="trust-logo"><img src="images/RealGXlogo.png" alt="Aviation Tech 1 logo"></div><div class="trust-logo"><img src="https://simpleflying.com/public/build/images/sf-logo-full-colored-dark.svg?v=3.0" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.avient.com/themes/upward/fluid/images/footer-logo.svg" alt="Green Energy 1 logo"></div><div class="trust-logo"><img src="https://www.dixongolf.com/assets/img/DixonGolf_Logo_HiRes_TransparentBG_RGB.png" alt="Green Energy 1 logo"></div></div>
+    </div>
 </section>
 <footer class="site-footer">
   <div class="footer-upper-wrapper">
@@ -988,6 +1697,7 @@ observer.observe(el);
 
 </footer>
 </main>
+<script src="sample78.js"></script>
 <script src="Scripts/main.js"></script>
 </body>
 </html>
