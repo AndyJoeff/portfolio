@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             title: "Aircraft Safety Analyzer",
             image: "images/skyintelmockup2.jpg",
-            description: "A user-friendly web-based tool that enables travelers to research the safety profiles of various aircraft models and airlines.",
+            description: "A user-friendly web-based tool that enables Aviation enthusiasts to research the safety profiles of various aircraft models and airlines.",
             stats: {
                 users: "10k+",
                 dataPoints: "500+",
