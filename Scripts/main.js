@@ -108,21 +108,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const testimonials = [
         {
             text: "Andrew's content strategy transformed our approach to communicating about sustainable aviation. Her ability to distill complex topics into engaging narratives significantly boosted our outreach effectiveness.",
-            name: "John Doe",
+            name: "James Rodriguez Doe",
             position: "Head of Sustainability, AeroGreen Airlines",
-            image: "images/profile-photo.jpg"
+            image: "images/Leonardo_Phoenix_an_image_of_James_Rodriguez_Head_of_Operation_3.jpg"
         },
         {
             text: "The data visualization campaign Andrew created for our airport efficiency study was nothing short of revolutionary. It made our findings accessible and compelling to stakeholders at all levels.",
             name: "Emma Wilson",
             position: "Operations Director, Global Airports Association",
-            image: "images/profile-photo.jpg"
+            image: "images/Leonardo_Phoenix_an_image_of_Sarah_Thompson_Chief_Safety_Offic_1.jpg"
         },
         {
             text: "Andrew's multimedia content package on the future of air travel not only went viral within the industry but also sparked meaningful discussions on sustainability. Her work is both visionary and pragmatic.",
             name: "Dr. Michael Chen",
             position: "Chief Innovation Officer, FutureFlight Technologies",
-            image: "images/profile-photo.jpg"
+            image: "images/Leonardo_Phoenix_an_image_of_Dr_Michael_Chen_Director_Aviation_3.jpg"
         }
     ];
   
