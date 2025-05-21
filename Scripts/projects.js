@@ -51,25 +51,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    projects.forEach(project => {
-        const projectElement = document.createElement('div');
-        projectElement.className = 'project-item';
-        projectElement.innerHTML = `
-            <div class="project-image" style="background-image: url(${project.image});"></div>
-            <div class="project-content">
-                <h3 class="project-title">${project.title}</h3>
-                <p class="project-description">${project.description}</p>
-                <div class="project-stats">
-                    ${Object.entries(project.stats).map(([key, value]) => `
-                        <div class="stat-item">
-                            <div class="stat-value">${value}</div>
-                            <div class="stat-label">${key}</div>
-                        </div>
-                    `).join('')}
-                </div>
-                <a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">${project.cta}</a>
+   projects.forEach((project, index) => {
+    const projectElement = document.createElement('div');
+    projectElement.className = 'project-item';
+
+    const isFirst = index === 0;
+    const imageClass = isFirst ? 'project-image first-project' : 'project-image';
+
+    projectElement.innerHTML = `
+        <div class="${imageClass}" style="background-image: url(${project.image});"></div>
+        <div class="project-content">
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <div class="project-stats">
+                ${Object.entries(project.stats).map(([key, value]) => `
+                    <div class="stat-item">
+                        <div class="stat-value">${value}</div>
+                        <div class="stat-label">${key}</div>
+                    </div>
+                `).join('')}
             </div>
-        `;
-        showcase.appendChild(projectElement);
-    });
+            <a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">${project.cta}</a>
+        </div>
+    `;
+    showcase.appendChild(projectElement);
+});
+
 });
