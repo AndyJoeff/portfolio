@@ -571,7 +571,7 @@
   /* General Styles */
 .services {
     background-color: #f0f8ff;
-    padding: 50px 20px;
+    padding: 50px;
     text-align: center;
     color: #333;
   }
@@ -1678,13 +1678,13 @@ p.instruction {
 }
 
 .service-item h3 {
-  font-size: 22px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   font-family: 'Poppins-semibold';
 }
 
 .service-item p {
-  font-size: 18px;
+  font-size: 0.9rem;
   font-family: helvetica;
   flex-grow: 1;
   color: #666;
