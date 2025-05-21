@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description: "Wrote in-depth content on sustainable aviation, eVTOL innovation, and aviation careers for one of the industry’s most respected platforms.",
             stats: {
                 reads: "30k+",
-                articles: "8",
+                articles: "3",
                 avgReadTime: "4.5 min"
             },
             cta: "View Featured Pieces",
