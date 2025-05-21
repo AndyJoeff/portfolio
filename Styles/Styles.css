@@ -1702,3 +1702,11 @@ p.instruction {
       grid-template-columns: 1fr;
   }
 }
+
+@media (min-width: 768px) {
+    .first-project {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
