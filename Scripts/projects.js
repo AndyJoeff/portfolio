@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = [
         {
             title: "Aircraft Safety Analyzer",
-            image: "images/andyjoeff.github.io_skyintel.png",
+            image: "images/skyintelmockup.jpg",
             description: "A user-friendly web-based tool that enables travelers to research the safety profiles of various aircraft models and airlines.",
             stats: {
                 users: "10k+",
