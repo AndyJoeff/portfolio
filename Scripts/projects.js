@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
          {
             title: "Aviation Editorials for The Pilot Network (TPN)",
-            image: "images/tpnmockup.jpg",
+            image: "images/tpnmockup1.jpg",
             description: "Wrote in-depth content on sustainable aviation, eVTOL innovation, and aviation careers for one of the industry’s most respected platforms.",
             stats: {
                 reads: "30k+",
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: "Aviation Explainer Videos",
-            image: "images/explainervideos.jpg",
+            image: "images/explainervideos1.jpg",
             description: "Scripted, voiced, and edited educational videos on a broad range of aviation topics for social media platforms.",
             stats: {
                 videos: "15+",
