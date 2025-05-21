@@ -6,7 +6,7 @@ const imageSets = {
     ],
     image2: [
         'images/1b839d_33e82dfe540b4df4a48a3d022ef46b52~mv2.jpg',
-        'images/greenaviation.jpg',
+        'images/reneawable for home.jpg',
         'images/aviation-career.jpg'
     ],
     image3: [
