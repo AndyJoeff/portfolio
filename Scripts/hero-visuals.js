@@ -7,10 +7,10 @@ const imageSets = {
     image2: [
         'images/1b839d_33e82dfe540b4df4a48a3d022ef46b52~mv2.jpg',
         'images/greenaviation.jpg',
-        'images/eco-friendly-living.jpg'
+        'images/aviation-career.jpg'
     ],
     image3: [
-        'images/agk42_environmentally_friendly_cloud_computing_c445230a-6d90-4702-a54d-d85725229995.png',
+        'images/skyintelmockup.jpg',
         'images/images5.png',
         'images/disposable-paper-coffee-cup.jpg'
     ]
