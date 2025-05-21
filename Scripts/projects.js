@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 dataPoints: "500+",
                 accuracy: "99%"
             },
-            cta: "Try the Analyzer"
+            cta: "Try the Analyzer",
+            link: "https://andyjoeff.github.io/skyintel/"
         },
         {
             title: "Airport Carbon Accreditation Program",
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 pages: "100+",
                 rating: "4.8/5"
             },
-            cta: "Download eBook"
+            cta: "Download eBook",
+            link: "https://example.com/airport-carbon-ebook"
         },
         {
             title: "Aviation Career Spotlight",
@@ -32,7 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 listeners: "50k+",
                 reviews: "4.7/5"
             },
-            cta: "Listen Now"
+            cta: "Listen Now",
+            link: "https://example.com/aviation-career-podcast"
         },
         {
             title: "Innovations in Urban Air Mobility",
@@ -43,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 articles: "15+",
                 shares: "5k+"
             },
-            cta: "Explore Series"
+            cta: "Explore Series",
+            link: "https://example.com/urban-air-mobility"
         }
     ];
 
@@ -63,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     `).join('')}
                 </div>
-                <a href="#" class="project-cta">${project.cta}</a>
+                <a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">${project.cta}</a>
             </div>
         `;
         showcase.appendChild(projectElement);
