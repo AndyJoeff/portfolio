@@ -13,6 +13,30 @@ document.addEventListener('DOMContentLoaded', function() {
             cta: "Try the Analyzer",
             link: "https://andyjoeff.github.io/skyintel/"
         },
+         {
+            title: "Aviation Editorials for The Pilot Network (TPN)",
+            image: "images/tpnmockup.jpg",
+            description: "Wrote in-depth content on sustainable aviation, eVTOL innovation, and aviation careers for one of the industry’s most respected platforms.",
+            stats: {
+                reads: "30k+",
+                articles: "8",
+                avgReadTime: "4.5 min"
+            },
+            cta: "View Featured Pieces",
+            link: "https://andyjoeff.github.io/skyintel/"
+        },
+        {
+            title: "Aviation Explainer Videos",
+            image: "images/explainervideos.jpg",
+            description: "Scripted, voiced, and edited educational videos on a broad range of aviation topics for social media platforms.",
+            stats: {
+                videos: "15+",
+                downloads: "5k+",
+                views: "20k+",
+            },
+            cta: "Watch Videos",
+            link: "https://example.com/airport-carbon-ebook"
+        },
         {
             title: "Airport Carbon Accreditation Program",
             image: "images/images5.png",
@@ -37,18 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cta: "Listen Now",
             link: "https://example.com/aviation-career-podcast"
         },
-        {
-            title: "Innovations in Urban Air Mobility",
-            image: "https://www.airmedandrescue.com/sites/amr/files/styles/full_size_view/public/2020-12/evtol-aircraft.jpg?h=56e4a533&itok=yZBdi2vs",
-            description: "Created a multimedia content series on urban air mobility, covering eVTOL technology, infrastructure needs, and societal impact.",
-            stats: {
-                views: "100k+",
-                articles: "15+",
-                shares: "5k+"
-            },
-            cta: "Explore Series",
-            link: "https://example.com/urban-air-mobility"
-        }
     ];
 
    projects.forEach((project, index) => {
