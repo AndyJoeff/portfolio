@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 avgReadTime: "4.5 min"
             },
             cta: "View Featured Pieces",
-            link: "https://andyjoeff.github.io/skyintel/"
+            link: "https://drive.google.com/drive/folders/1A2Emm5DhcdPovfuCiUboiwYIP-OrVsnN?usp=sharing"
         },
         {
             title: "Aviation Explainer Videos",
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 views: "20k+",
             },
             cta: "Watch Videos",
-            link: "https://example.com/airport-carbon-ebook"
+            link: "https://drive.google.com/drive/folders/1g11G5BOGFt5JhprlV709FG8YRUfbUrae?usp=sharing"
         },
         {
             title: "Airport Carbon Accreditation Program",
