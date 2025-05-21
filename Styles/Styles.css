@@ -1712,7 +1712,7 @@ p.instruction {
 }
 @media (min-width: 768px) {
   .services {
-      padding: 50px;
+      padding: 50px 70px;
   }
 }
 
