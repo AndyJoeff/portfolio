@@ -629,7 +629,7 @@
   .service-item p {
     margin-bottom: 0;
     font-size: 16px;
-    font-family: helvetica;
+    font-family: Arial, helvetica;
   }
   
   /* Call to Action */
@@ -1720,6 +1720,12 @@ p.instruction {
   .service-grid {
       grid-template-columns: 1fr;
   }
+    .service-item p {
+        font-size: 16px;
+    }
+    .service-item h3 {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 768px) {
