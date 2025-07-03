@@ -151,6 +151,10 @@
     line-height: 1.2;
     font-family: Jost-Bold;
   }
+
+.hero h1{
+    font-family: Times New Roman;
+}
   
   .hero p {
     font-size: 1.2rem;
