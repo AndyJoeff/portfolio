@@ -107,21 +107,21 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     const testimonials = [
         {
-            text: "Andrew's content strategy transformed our approach to communicating about sustainable aviation. Her ability to distill complex topics into engaging narratives significantly boosted our outreach effectiveness.",
-            name: "James Rodriguez Doe",
-            position: "Head of Sustainability, AeroGreen Airlines",
-            image: "images/Leonardo_Phoenix_an_image_of_James_Rodriguez_Head_of_Operation_3.jpg"
+            text: "Andrew's attention to detail and ability to capture our brand voice have made him an invaluable asset to our content team.",
+            name: "Adam Uhan",
+            position: "Co-founder, ThePilotNetwork",
+            image: "https://images.squarespace-cdn.com/content/v1/601314903dcc51351d60ab63/1612812210952-D5LS4HYEFDRXPVERTJN7/AdamUhanFINAL-19.jpg"
         },
         {
-            text: "The data visualization campaign Andrew created for our airport efficiency study was nothing short of revolutionary. It made our findings accessible and compelling to stakeholders at all levels.",
-            name: "Emma Wilson",
-            position: "Operations Director, Global Airports Association",
-            image: "images/Leonardo_Phoenix_an_image_of_Sarah_Thompson_Chief_Safety_Offic_1.jpg"
+            text: "Your first article went above and beyond and definitely aligned with TPN's writing style. I learned a lot myself while reading it - such a cool topic.",
+            name: "Ali Scheinfeld",
+            position: "Account Coordinator, Serendipity & Company",
+            image: "https://media.licdn.com/dms/image/v2/D4E03AQEC4YGR6kvgrA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1713967544069?e=1768435200&v=beta&t=bjMgTiT8GTdDQUwKdvslpRZlZ23qmSTGi7UMRdIbgKs"
         },
         {
-            text: "Andrew's multimedia content package on the future of air travel not only went viral within the industry but also sparked meaningful discussions on sustainability. Her work is both visionary and pragmatic.",
-            name: "Dr. Michael Chen",
-            position: "Chief Innovation Officer, FutureFlight Technologies",
+            text: "Andrew's writing has significantly improved our blog's engagement. His ability to break down complex topics into digestible content is remarkable.",
+            name: "Eric Brandtner",
+            position: "Chief Executive Officer, JARA Publishing",
             image: "images/Leonardo_Phoenix_an_image_of_Dr_Michael_Chen_Director_Aviation_3.jpg"
         }
     ];
