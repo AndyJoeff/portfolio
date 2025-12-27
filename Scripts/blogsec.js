@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         date: 'October 28, 2025',
         category: 'Feature article',
         title: 'Are Cockpit Cameras the Missing Piece in Crash Investigations?',
-        snippet: 'Vishwaskumar Ramesh, a 40-year-old British national, was the only passenger to survive Air India Flight 171'...'
+        snippet: 'Vishwaskumar Ramesh, a 40-year-old British national, was the only passenger to survive Air India Flight 171...'
       },
       {
         image: 'images/Eviation_aliceV2.png',
