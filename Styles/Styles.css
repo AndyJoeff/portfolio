@@ -1737,3 +1737,7 @@ p.instruction {
         background-position: center;
     }
 }
+
+.sustainability{
+    display: none;
+}
